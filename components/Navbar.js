@@ -67,7 +67,7 @@ export default function Navbar() {
         }}
       >
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
-          <Image src="/logo.jpg" alt="Little Seeds" width={120} height={42} style={{ height: 42, width: "auto", objectFit: "contain" }} priority />
+          <Image src="/logo-transparent.png" alt="Little Seeds" width={120} height={42} style={{ height: 42, width: "auto", objectFit: "contain" }} priority />
         </Link>
 
         <div className="ls-nav-d" style={{ display: "flex", gap: 26, alignItems: "center" }}>
@@ -75,7 +75,7 @@ export default function Navbar() {
           <button onClick={() => scrollTo("about")} style={navLinkStyle}>About</button>
           <button onClick={() => scrollTo("contact")} style={navLinkStyle}>Contact</button>
           <button
-            onClick={() => scrollTo("contact")}
+            onClick={() => scrollTo("enroll")}
             style={{
               background: C.teal,
               color: C.white,
@@ -118,6 +118,7 @@ export default function Navbar() {
           <button onClick={() => scrollTo("programs")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>Programs</button>
           <button onClick={() => scrollTo("about")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>About</button>
           <button onClick={() => scrollTo("contact")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>Contact</button>
+          <button onClick={() => scrollTo("enroll")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>Enroll Now</button>
         </div>
       )}
     </nav>

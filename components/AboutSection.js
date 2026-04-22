@@ -18,7 +18,7 @@ export default function AboutSection() {
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
         <FadeIn>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <Image src="/logo.jpg" alt="" width={140} height={70} style={{ height: 70, width: "auto", margin: "0 auto 12px", display: "block" }} />
+            <Image src="/logo-transparent.png" alt="" width={140} height={70} style={{ height: 70, width: "auto", margin: "0 auto 12px", display: "block" }} />
             <SectionLabel text="About Us" color={C.teal} />
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(26px, 4vw, 38px)", fontWeight: 700, color: C.text, margin: "10px 0 16px" }}>Rooted in Faith, Growing Together</h2>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, lineHeight: 1.75, color: C.textMuted, maxWidth: 680, margin: "0 auto" }}>

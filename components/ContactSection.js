@@ -54,10 +54,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" style={{ padding: "90px 24px", background: `linear-gradient(170deg, ${C.tealLight} 0%, ${C.cream} 100%)` }}>
+    <section id="enroll" style={{ padding: "90px 24px", background: `linear-gradient(170deg, ${C.tealLight} 0%, ${C.cream} 100%)`, scrollMarginTop: 96 }}>
+      <div id="contact" style={{ position: "relative", top: -96 }} />
       <div style={{ maxWidth: 620, margin: "0 auto", textAlign: "center" }}>
         <FadeIn>
-          <Image src="/logo.jpg" alt="" width={120} height={56} style={{ height: 56, width: "auto", margin: "0 auto 12px", display: "block" }} />
+          <Image src="/logo-transparent.png" alt="" width={120} height={56} style={{ height: 56, width: "auto", margin: "0 auto 12px", display: "block" }} />
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(26px, 4vw, 36px)", fontWeight: 700, color: C.text, margin: "0 0 8px" }}>Ready to Enroll?</h2>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: C.textMuted, lineHeight: 1.65, marginBottom: 36 }}>
             Fill out the form and our team will help you find the perfect fit for your family.

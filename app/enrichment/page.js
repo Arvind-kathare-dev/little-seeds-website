@@ -1,4 +1,5 @@
 import BackButton from "@/components/BackButton";
+import AboutSection from "@/components/AboutSection";
 import SectionLabel from "@/components/SectionLabel";
 import { C } from "@/components/constants";
 import { EnrichmentIllustration } from "@/components/Illustrations";
@@ -125,6 +126,8 @@ export default function EnrichmentPage() {
           ))}
         </div>
       </section>
+
+      <AboutSection />
     </div>
   );
 }

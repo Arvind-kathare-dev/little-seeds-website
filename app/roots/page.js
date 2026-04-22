@@ -1,4 +1,5 @@
 import BackButton from "@/components/BackButton";
+import AboutSection from "@/components/AboutSection";
 import SectionLabel from "@/components/SectionLabel";
 import { C } from "@/components/constants";
 import { RootsIllustration } from "@/components/Illustrations";
@@ -77,6 +78,8 @@ export default function RootsPage() {
           </div>
         </div>
       </section>
+
+      <AboutSection />
     </div>
   );
 }
