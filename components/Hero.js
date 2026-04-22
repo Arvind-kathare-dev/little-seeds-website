@@ -23,7 +23,7 @@ export default function Hero() {
 
       <div style={{ textAlign: "center", maxWidth: 760, position: "relative", zIndex: 1 }}>
         <FadeIn>
-          <Image src="/logo.jpg" alt="Little Seeds" width={260} height={130} style={{ height: 130, width: "auto", margin: "0 auto 16px", display: "block" }} priority />
+          <Image src="/logo-transparent.png" alt="Little Seeds" width={300} height={180} style={{ height: 180, width: "auto", margin: "0 auto 16px", display: "block" }} priority />
         </FadeIn>
 
         <FadeIn delay={0.12}>
