@@ -14,7 +14,7 @@ const PROGRAMS = [
 
 export default function ProgramCards() {
   return (
-    <section id="programs" style={{ padding: "100px 24px 80px", background: C.white }}>
+    <section id="programs" style={{ padding: "80px 24px 60px", background: C.white }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <FadeIn>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
