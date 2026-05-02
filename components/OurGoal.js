@@ -1,0 +1,477 @@
+"use client";
+
+import { C } from "./constants";
+import FadeIn from "./FadeIn";
+import Image from "next/image";
+import GoalContactBanner from "./GoalContactBanner";
+import ourGoalImage1 from "@/public/our-goal/v1.png";
+import ourGoalImage2 from "@/public/our-goal/v2.png";
+import ourGoalImage3 from "@/public/our-goal/v3.png";
+import ourGoalImage4 from "@/public/our-goal/v4.png";
+import ourGoalImage5 from "@/public/our-goal/v5.png";
+import ourGoalImage6 from "@/public/our-goal/v6.png";
+import bookletImage1 from "@/public/our-goal/goal-image1.png";
+import bookletImage2 from "@/public/our-goal/goal-image2.png";
+import bookletImage3 from "@/public/our-goal/goal-image3.png";
+import bookletImage4 from "@/public/our-goal/goal-image4.png";
+import bookletImage5 from "@/public/our-goal/goal-image5.png";
+import bookletImage6 from "@/public/our-goal/goal-image6.png";
+
+const goalCards = [
+  {
+    text: "A faith-based yet inclusive environment welcoming all families",
+    icon: <Image src={ourGoalImage1} alt="Our Goal" width={40} height={40} className="our-goal-icon" />,
+  },
+  {
+    text: "A curriculum that balances Islamic values with modern education",
+    icon: <Image src={ourGoalImage2} alt="Our Goal" width={40} height={40} className="our-goal-icon" />,
+  },
+  {
+    text: "Teachers who teach with purpose, love, and commitment",
+    icon: <Image src={ourGoalImage3} alt="Our Goal" width={44} height={40} className="our-goal-icon" />,
+  },
+  {
+    text: "Flexible programs for full-time and part-time families",
+    icon: <Image src={ourGoalImage4} alt="Our Goal" width={54} height={40} className="our-goal-icon" />,
+  },
+  {
+    text: "Integration of technology and STEAM within moral frameworks",
+    icon: <Image src={ourGoalImage5} alt="Our Goal" width={50} height={40} className="our-goal-icon" />,
+  },
+  {
+    text: "Strong communication between school and home",
+    icon: <Image src={ourGoalImage6} alt="Our Goal" width={50} height={40} className="our-goal-icon" />,
+  },
+];
+
+const bookletCards = [
+  {
+    title: "Purpose",
+    description: "Our mission, values, and approach to nurturing every child.",
+    image: bookletImage1,
+  },
+  {
+    title: "Academics",
+    description: "Curriculum overview and teaching methods.",
+    image: bookletImage2,
+  },
+  {
+    title: "Faculty",
+    description: "Meet our caring teachers and classroom support team.",
+    image: bookletImage3,
+  },
+  {
+    title: "Policies",
+    description: "Important school guidelines, expectations, and procedures.",
+    image: bookletImage4,
+  },
+  {
+    title: "Safety",
+    description: "Daily routines that help children feel protected and cared for.",
+    image: bookletImage5,
+  },
+  {
+    title: "Schedules",
+    description: "Program timing, classroom rhythm, and family planning details.",
+    image: bookletImage6,
+  },
+];
+
+export default function OurGoal() {
+  return (
+    <>
+      <section
+        id="our-goal"
+        className="our-goal-section"
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: `linear-gradient(168deg, ${C.cream} 0%, ${C.tealLight} 50%, ${C.coralPale} 100%)`,
+          position: "relative",
+          overflow: "hidden",
+          padding: "120px 24px 80px",
+        }}
+      >
+        <div className="our-goal-glow our-goal-glow-left" />
+        <div className="our-goal-glow our-goal-glow-right" />
+
+        <div className="our-goal-shell">
+          <FadeIn>
+            <h1>Our Goal</h1>
+          </FadeIn>
+
+          <FadeIn delay={0.12}>
+            <p className="our-goal-intro">
+              We provide a faith-centered, inclusive learning environment rooted in Islamic values and modern education.
+            </p>
+          </FadeIn>
+
+          <div className="our-goal-grid">
+            {goalCards.map((card, index) => (
+              <FadeIn delay={0.08 * index} key={card.text}>
+                <article className="our-goal-card">
+                  <div className="our-goal-icon">{card.icon}</div>
+                  <p>{card.text}</p>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="school-booklet-section" aria-labelledby="school-booklet-title">
+        <div className="school-booklet-shell">
+          <FadeIn>
+            <h2 id="school-booklet-title">School Booklet Overview</h2>
+            <p className="school-booklet-intro">
+              The Little Seeds School Booklet provides parents with everything they need to know about our programs and philosophy.
+            </p>
+          </FadeIn>
+
+          <div className="school-booklet-grid">
+            {bookletCards.map((card, index) => (
+              <FadeIn delay={0.06 * index} key={card.title}>
+                <article className="school-booklet-card">
+                  <div className="school-booklet-image-wrap">
+                    <Image
+                      src={card.image}
+                      alt={`${card.title} booklet preview`}
+                      fill
+                      sizes="(max-width: 620px) calc(100vw - 36px), (max-width: 900px) calc((100vw - 64px) / 2), 455px"
+                      className="school-booklet-image"
+                    />
+                    <span className="school-booklet-hover" />
+                  </div>
+                  <div className="school-booklet-copy">
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                  </div>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <GoalContactBanner />
+
+      <style>{`
+        .our-goal-section::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(circle at 22% 23%, rgba(47, 127, 125, 0.06), transparent 28%),
+            radial-gradient(circle at 78% 36%, rgba(232, 155, 135, 0.08), transparent 24%);
+          pointer-events: none;
+        }
+
+        .our-goal-shell {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          max-width: 1100px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .our-goal-shell h1 {
+          margin: 0;
+          color: ${C.text};
+          font-size: clamp(30px, 5vw, 42px);
+          font-weight: 600;
+          line-height: 1;
+          letter-spacing: -0.045em;
+        }
+
+        .our-goal-intro {
+        max-width: 480px;
+          margin: 28px auto 112px;
+          color: #101820;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.35;
+          letter-spacing: -0.02em;
+        }
+
+        .our-goal-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 16px;
+        }
+
+        .our-goal-card {
+          min-height: 132px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 26px 22px 24px;
+          border: 1px solid rgba(47, 127, 125, 0.22);
+          border-radius: 9px;
+          background: rgba(255, 255, 255, 0.82);
+          box-shadow: 0 17px 38px rgba(45, 52, 54, 0.04);
+        }
+
+        .our-goal-icon {
+          object-fit: contain;
+          margin-bottom: 6px;
+        }
+
+        .our-goal-card p {
+          max-width: 220px;
+          margin: 0 auto;
+          color: #202729;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 1.35;
+          letter-spacing: -0.018em;
+        }
+
+        @media (max-width: 900px) {
+          .our-goal-intro {
+            margin-bottom: 64px;
+          }
+
+          .our-goal-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 620px) {
+          .our-goal-section {
+            padding: 104px 18px 56px !important;
+          }
+
+          .our-goal-intro {
+            margin: 20px auto 44px;
+            font-size: 12.5px;
+          }
+
+          .our-goal-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .our-goal-card {
+            min-height: 118px;
+          }
+        }
+
+        .school-booklet-section {
+          background: #ffffff;
+          padding: 66px 24px 86px;
+        }
+
+        .school-booklet-shell {
+          width: 1100px;
+          margin: 0 auto;
+        }
+
+        .school-booklet-shell h2 {
+          margin: 0 0 6px;
+          color: #1f2527;
+          font-size: clamp(25px, 3vw, 33px);
+          font-weight: 600;
+          line-height: 1.05;
+          letter-spacing: -0.04em;
+        }
+
+        .school-booklet-intro {
+          margin: 0 0 36px;
+          color: #11191c;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.45;
+          letter-spacing: -0.02em;
+        }
+
+        .school-booklet-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 455px));
+          justify-content: center;
+          gap: 22px 24px;
+        }
+
+        .school-booklet-card {
+          --booklet-image-height: 300px;
+          --booklet-image-hover-height: 250px;
+          display: block;
+          cursor: pointer;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        .school-booklet-image-wrap {
+          position: relative;
+          width: 100%;
+          height: var(--booklet-image-height);
+          overflow: hidden;
+          border-radius: 3px;
+          background: #f1eee9;
+          box-shadow: 0 12px 30px rgba(24, 29, 31, 0.08);
+          transform: translateZ(0);
+          transition:
+            height 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+          will-change: height;
+        }
+
+        .school-booklet-image {
+          object-fit: cover;
+          transform: scale(1);
+          transition:
+            transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+            filter 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+          will-change: transform;
+        }
+
+        .school-booklet-hover {
+          position: absolute;
+          inset: 0;
+          background: #00000099;
+          transition: background 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+          pointer-events: none;
+        }
+
+        .school-booklet-card:hover .school-booklet-image-wrap,
+        .school-booklet-card:focus-within .school-booklet-image-wrap {
+          height: var(--booklet-image-hover-height);
+          box-shadow: 0 16px 34px rgba(24, 29, 31, 0.12);
+        }
+
+        .school-booklet-card:hover .school-booklet-image,
+        .school-booklet-card:focus-within .school-booklet-image {
+          transform: scale(1.06);
+          filter: saturate(1.06) contrast(1.03);
+        }
+
+        .school-booklet-card:hover .school-booklet-hover,
+        .school-booklet-card:focus-within .school-booklet-hover {
+          background: rgba(0, 0, 0, 0.08);
+        }
+
+        .school-booklet-copy {
+          min-height: 46px;
+          padding-top: 8px;
+        }
+
+        .school-booklet-card h3 {
+          margin: 0;
+          color: #11191c;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 1.1;
+          letter-spacing: -0.025em;
+        }
+
+        .school-booklet-card p {
+          max-width: 220px;
+          margin: 4px 0 0;
+          color: #30393c;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.45;
+          letter-spacing: -0.018em;
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transform: translateY(-4px);
+          transition:
+            opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+            max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+            transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+          pointer-events: none;
+        }
+
+        .school-booklet-card:hover p,
+        .school-booklet-card:focus-within p {
+          opacity: 1;
+          max-height: 32px;
+          transform: translateY(0);
+        }
+
+        @media (max-width: 1460px) {
+          .school-booklet-shell {
+            max-width: 100%;
+          }
+
+          .school-booklet-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+
+          .school-booklet-card {
+            --booklet-image-height: 300px;
+            --booklet-image-hover-height: 250px;
+          }
+        }
+
+        @media (max-width: 900px) {
+          .school-booklet-section {
+            padding: 58px 22px 76px;
+          }
+
+          .school-booklet-shell {
+            width: 100%;
+            max-width: 720px;
+          }
+
+          .school-booklet-card {
+            --booklet-image-height: clamp(240px, 39vw, 300px);
+            --booklet-image-hover-height: clamp(205px, 33vw, 250px);
+          }
+
+          .school-booklet-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px 18px;
+          }
+        }
+
+        @media (max-width: 620px) {
+          .school-booklet-section {
+            padding: 48px 18px 64px;
+          }
+
+          .school-booklet-intro {
+            margin-bottom: 24px;
+            font-size: 10.5px;
+          }
+
+          .school-booklet-grid {
+            grid-template-columns: 1fr;
+            gap: 22px;
+          }
+
+          .school-booklet-card {
+            --booklet-image-height: clamp(230px, 78vw, 300px);
+            --booklet-image-hover-height: clamp(205px, 68vw, 250px);
+          }
+
+          .school-booklet-card h3 {
+            font-size: 14px;
+          }
+
+          .school-booklet-card p {
+            max-width: 100%;
+            font-size: 9px;
+            opacity: 1;
+            max-height: 40px;
+            transform: none;
+          }
+        }
+
+        @media (hover: none) {
+          .school-booklet-card .school-booklet-image-wrap {
+            height: var(--booklet-image-height);
+          }
+
+          .school-booklet-card p {
+            opacity: 1;
+            max-height: 40px;
+            transform: none;
+          }
+        }
+      `}</style>
+    </>
+  );
+}
