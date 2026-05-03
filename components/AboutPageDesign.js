@@ -44,13 +44,7 @@ export default function AboutPageDesign() {
             <FadeIn delay={0.16}>
               <div className="about-page-copy">
                 <p>
-                  Little Seeds is a faith-centered learning community rooted in Islamic values, providing a nurturing environment where children grow academically, socially, emotionally, and spiritually.
-                </p>
-                <p>
-                  We welcome families from all backgrounds and offer programs designed to support children through every stage of their early learning journey. Our classrooms combine strong educational foundations with character development, kindness, respect, responsibility, and love for learning.
-                </p>
-                <p>
-                  Our goal is to help every child feel safe, seen, and supported while building confidence, curiosity, and a meaningful connection to faith and community. At Little Seeds, education is more than lessons; it is a daily experience of care, purpose, and growth.
+                Little Seeds is a faith-centered learning community rooted in Islam, guided by love, and committed to nurturing the whole child. Our identity is built on balance where strong Islamic values, character development, and academic excellence come together without compromise. We believe children learn best when they feel safe, respected, and inspired, which is why we teach Islam with understanding and compassion, not pressure or fear. While proudly grounded in our Muslim identity, we warmly welcome families of all backgrounds, creating an environment of respect, inclusion, and purpose. At Little Seeds, we are more than a school we are a place where faith is lived daily, knowledge is nurtured intentionally, and children grow into confident, kind, and mindful individuals prepared for both this world and the next.
                 </p>
               </div>
             </FadeIn>
@@ -127,6 +121,17 @@ export default function AboutPageDesign() {
       <GoalContactBanner/>
 
       <style>{`
+        .about-page-section h1,
+        .our-goal-section h2,
+        .teachers-section h2 {
+          font-family: "Playfair Display", serif;
+        }
+
+        .about-page-copy,
+        .teachers-copy p {
+          font-family: "DM Sans", sans-serif;
+        }
+
         .about-page-section {
           min-height: 100vh;
           display: flex;

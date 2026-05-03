@@ -105,6 +105,15 @@ export default function PicturesPageDesign() {
       )}
 
       <style>{`
+        .pictures-page-shell h1 {
+          font-family: "Playfair Display", serif;
+        }
+
+        .pictures-page-section,
+        .pictures-lightbox-arrow {
+          font-family: "DM Sans", sans-serif;
+        }
+
         .pictures-page-section {
           min-height: 100vh;
           background: #fbfdfa;

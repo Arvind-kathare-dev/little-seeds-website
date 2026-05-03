@@ -78,7 +78,7 @@ export default function Footer() {
         <div>
           <p style={colTitle}>Our Branches</p>
           {BRANCHES.map((b) => (
-            <p key={b} style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13.5, color: "rgba(255,255,255,.6)", margin: "0 0 6px" }}>{b}</p>
+            <p key={b} style={{ fontFamily: "DM Sans', sans-serif", fontSize: 13.5, color: "rgba(255,255,255,.6)", margin: "0 0 6px" }}>{b}</p>
           ))}
         </div>
 

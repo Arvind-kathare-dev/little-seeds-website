@@ -158,14 +158,16 @@ export default function OurGoal() {
       <GoalContactBanner />
 
       <style>{`
-        .our-goal-section::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background:
-            radial-gradient(circle at 22% 23%, rgba(47, 127, 125, 0.06), transparent 28%),
-            radial-gradient(circle at 78% 36%, rgba(232, 155, 135, 0.08), transparent 24%);
-          pointer-events: none;
+        .our-goal-section h1,
+        .school-booklet-section h2{
+          font-family: "Playfair Display", serif;
+        }
+
+        .our-goal-intro,
+        .our-goal-card p,
+        .school-booklet-intro,
+        .school-booklet-card p {
+          font-family: "DM Sans", sans-serif;
         }
 
         .our-goal-shell {
@@ -187,7 +189,7 @@ export default function OurGoal() {
         }
 
         .our-goal-intro {
-        max-width: 480px;
+        max-width: 300px;
           margin: 28px auto 112px;
           color: #101820;
           font-size: 13px;
@@ -279,6 +281,7 @@ export default function OurGoal() {
           font-size: clamp(25px, 3vw, 33px);
           font-weight: 600;
           line-height: 1.05;
+          margin-bottom: 12px;
           letter-spacing: -0.04em;
         }
 
@@ -363,7 +366,7 @@ export default function OurGoal() {
         .school-booklet-card h3 {
           margin: 0;
           color: #11191c;
-          font-size: 13px;
+          font-size: 15px;
           font-weight: 600;
           line-height: 1.1;
           letter-spacing: -0.025em;
@@ -373,7 +376,7 @@ export default function OurGoal() {
           max-width: 220px;
           margin: 4px 0 0;
           color: #30393c;
-          font-size: 13px;
+          font-size: 12px;
           font-weight: 500;
           line-height: 1.45;
           letter-spacing: -0.018em;

@@ -14,26 +14,26 @@ import GoalContactBanner from "./GoalContactBanner";
 const choosingCards = [
   {
     icon: choosing1,    
-    title: "Teachers Rooted in Loving and Prophetic Mercy",
-    text: "Our teachers guide with warmth, patience, and mercy, creating classrooms where children feel safe, respected, and loved.",
+    title: "Passionate About Teaching and Shaping Young Hearts",
+    text: "Our teachers genuinely love working with children and are dedicated to nurturing not just minds, but hearts. They inspire curiosity, confidence, and a lifelong love for learning.",
     color: "#9FBA6214",
   },
   {
     icon: choosing2,
-    title: "Educators with Established Educational Values",
-    text: "Each teacher is chosen for strong teaching values, professionalism, and a genuine commitment to helping children grow with confidence.",
+    title: "Spiritually grounded and emotionally intelligent",
+    text: "Guided by faith and emotional awareness, our educators model patience, empathy, and understanding. They help children grow spiritually while supporting their social and emotional development.",
     color: "#5F9B9014",
   },
   {
     icon: choosing3,
     title: "Committed to Continuous Learning and Growth",
-    text: "Our team continues to learn, improve, and develop so every child receives meaningful care and high-quality instruction.",
+    text: "Our teachers see education as a calling, not a job. They continually enhance their skills through professional development, staying up to date with the latest teaching practices and child development research.",
     color: "#F6D8902E",
   },
   {
     icon: choosing4,  
-    title: "Loving, patient, and mindful in the classroom",
-    text: "We look for teachers who bring calm energy, thoughtful guidance, and a sincere love for children into every classroom.",
+    title: "Loving, patient, and creative in the classroom",
+    text: "Every lesson is delivered with warmth, patience, and creativity. Our educators use innovative approaches to make learning engaging, meaningful, and joyful for every child.",
     color: "#FFF7F5",
   },
 ];
@@ -46,6 +46,20 @@ const teachersText = [
 export default function TeachersPageDesign() {
   return (
     <>
+      <section
+        id="our-goal"
+        className="our-goal-section"
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: `linear-gradient(168deg, ${C.cream} 0%, ${C.tealLight} 50%, ${C.coralPale} 100%)`,
+          position: "relative",
+          overflow: "hidden",
+          padding: "120px 24px 80px",
+        }}
+      >
       <section className="teachers-page-section">
         <div className="teachers-page-shell">
           <FadeIn>
@@ -86,6 +100,7 @@ export default function TeachersPageDesign() {
           </div>
         </div>
       </section>
+      </section>
 
       <section className="choosing-teachers-section">
         <div className="choosing-teachers-shell">
@@ -95,9 +110,9 @@ export default function TeachersPageDesign() {
               <p>
                 At Little Seeds, we carefully select teachers who are more than educators; they are mentors, guides, and role models who inspire children every day. Our team embodies the following qualities:
               </p>
-              <h3>In order to meet them:</h3>
+              <h3>Role Models of Faith and Character:</h3>
               <p>
-                We look for educators with a heart for children and a deep respect for faith, character, learning, and family partnership.
+              Beyond academics, our teachers embody Islamic values in their actions and interactions, inspiring children to live with integrity, kindness, and respect.
               </p>
             </div>
           </FadeIn>
@@ -147,16 +162,17 @@ export default function TeachersPageDesign() {
       <GoalContactBanner/>
 
       <style>{`
-        .teachers-page-section {
-          min-height: 100vh;
-          display: flex;
-          align-items: flex-start;
-          justify-content: center;
-          background:
-            radial-gradient(circle at 16% 68%, rgba(47, 127, 125, 0.08), transparent 30%),
-            radial-gradient(circle at 84% 42%, rgba(232, 155, 135, 0.07), transparent 28%),
-            #fbfdfa;
-          padding: 96px 24px 72px 24px;
+        .teachers-page-section h1,
+        .choosing-teachers-section h2,
+        .teachers-training-section h2 {
+          font-family: "Playfair Display", serif;
+        }
+
+        .teachers-page-copy,
+        .choosing-teachers-intro p,
+        .choosing-teachers-card p,
+        .teachers-training-copy p {
+          font-family: "DM Sans", sans-serif;
         }
 
         .teachers-page-shell {

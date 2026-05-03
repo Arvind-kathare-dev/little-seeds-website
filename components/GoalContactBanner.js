@@ -41,6 +41,15 @@ export default function GoalContactBanner() {
       </FadeIn>
 
       <style>{`
+        .goal-contact-content h2 {
+          font-family: "Playfair Display", serif;
+        }
+
+        .goal-contact-item small,
+        .goal-contact-item strong {
+          font-family: "DM Sans", sans-serif;
+        }
+
         .goal-contact-banner {
           position: relative;
           min-height: 420px;

@@ -98,8 +98,10 @@ export default function RamadanPageDesign() {
               <span className="ramadan-page-hero-overlay" />
 
               <div className="ramadan-page-hero-content">
-                <h1>
-                  Saturday &amp; Sunday <span>11:00 AM - 3:00 PM</span>
+                <h1 style={{fontFamily: "'DM Sans', sans-serif"}}>
+                  Saturday &amp; Sunday 
+                  <span className="border-right"></span>
+                   <span>11:00 AM - 3:00 PM</span>
                 </h1>
                 <div className="ramadan-page-tags">
                   <span>Ages Required 4 - 12</span>
@@ -228,7 +230,7 @@ export default function RamadanPageDesign() {
               <ul>
                 <li>Full Ramadan weekend program</li>
                 <li>Instructional materials and supplies</li>
-                <li>Structured learning, supervision, and guided faith</li>
+                <li>Structured learning, assemblies, and guided Salah</li>
               </ul>
             </div>
           </FadeIn>
@@ -238,6 +240,44 @@ export default function RamadanPageDesign() {
       <ContactSection/>
 
       <style>{`
+        .ramadan-page-section h1,
+        .ramadan-page-section h2,
+        .ramadan-subjects-section h2,
+        .ramadan-groups-section h2,
+        .ramadan-visit-card h2,
+        .ramadan-tuition-copy h2 {
+          font-family: "Playfair Display", serif;
+        }
+
+        .border-right {
+          padding-right: 32px;
+          height: 30px;
+          margin-right: 32px;
+          display: inline-block;
+          position: relative;
+        }
+        .border-right::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -5px;
+          width: 5px;
+          height: 100%;
+          background: #ffffff;
+        }
+
+        .ramadan-page-copy,
+        .ramadan-page-tags span,
+        .ramadan-subject-card ul,
+        .ramadan-group-item ul,
+        .ramadan-visit-card p,
+        .ramadan-price,
+        .ramadan-tuition-copy p,
+        .ramadan-tuition-copy ul {
+          font-family: "DM Sans", sans-serif;
+        }
+
         .ramadan-page-section {
           min-height: 100vh;
           display: flex;
