@@ -273,11 +273,12 @@ export default function PicturesPageDesign() {
 
         @media (max-width: 620px) {
           .pictures-page-section {
-            padding: 94px 18px 64px;
+            padding: 86px 14px 56px;
           }
 
           .pictures-page-shell h1 {
-            margin-bottom: 30px;
+            font-size: 28px;
+            margin-bottom: 26px;
           }
 
           .pictures-grid {

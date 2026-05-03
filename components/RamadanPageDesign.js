@@ -380,7 +380,7 @@ export default function RamadanPageDesign() {
 
         @media (max-width: 620px) {
           .ramadan-page-section {
-            padding: 86px 18px 60px;
+            padding: 82px 14px 52px;
           }
 
           .ramadan-page-hero {
@@ -389,6 +389,7 @@ export default function RamadanPageDesign() {
           }
 
           .ramadan-page-hero-content h1 {
+            font-size: 22px;
             margin-bottom: 18px;
           }
 
@@ -403,7 +404,11 @@ export default function RamadanPageDesign() {
           }
 
           .ramadan-page-content {
-            padding-top: 28px;
+            padding-top: 24px;
+          }
+
+          .ramadan-page-content h2 {
+            font-size: 26px;
           }
 
           .ramadan-page-copy {
@@ -567,9 +572,9 @@ export default function RamadanPageDesign() {
         .ramadan-visit-card {
           position: absolute;
           top: 34px;
-          right: max(24px, calc((100vw - 1100px) / 2));
+          right: 24px;
           z-index: 2;
-          width: 260px;
+          width: 240px;
           height:80%;
           padding: 28px 26px;
           border-radius: 18px;
@@ -729,11 +734,12 @@ export default function RamadanPageDesign() {
         @media (max-width: 620px) {
           .ramadan-subjects-section,
           .ramadan-groups-section {
-            padding: 54px 18px 62px;
+            padding: 48px 14px 56px;
           }
 
           .ramadan-subjects-shell h2,
           .ramadan-groups-shell h2 {
+            font-size: 26px;
             margin-bottom: 28px;
           }
 
@@ -756,8 +762,8 @@ export default function RamadanPageDesign() {
           }
 
           .ramadan-visit-card {
-            left: 18px;
-            right: 18px;
+            left: 14px;
+            right: 14px;
             top: 22px;
             width: auto;
             min-height: auto;
@@ -766,7 +772,7 @@ export default function RamadanPageDesign() {
           }
 
           .ramadan-tuition-section {
-            padding: 54px 18px 62px;
+            padding: 48px 14px 56px;
           }
 
           .ramadan-tuition-image {
@@ -777,6 +783,11 @@ export default function RamadanPageDesign() {
           .ramadan-price {
             flex-wrap: wrap;
             margin-bottom: 22px;
+          }
+
+          .ramadan-visit-card h2,
+          .ramadan-tuition-copy h2 {
+            font-size: 24px;
           }
         }
       `}</style>

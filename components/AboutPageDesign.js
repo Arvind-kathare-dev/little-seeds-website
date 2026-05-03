@@ -216,7 +216,7 @@ export default function AboutPageDesign() {
 
         @media (max-width: 620px) {
           .about-page-section {
-            padding: 86px 18px 58px;
+            padding: 82px 14px 50px;
           }
 
           .about-page-hero {
@@ -225,7 +225,11 @@ export default function AboutPageDesign() {
           }
 
           .about-page-content {
-            padding-top: 28px;
+            padding-top: 24px;
+          }
+
+          .about-page-content h1 {
+            font-size: 28px;
           }
 
           .about-page-copy {
@@ -374,7 +378,7 @@ export default function AboutPageDesign() {
 
         @media (max-width: 620px) {
           .teachers-section {
-            padding: 54px 18px;
+            padding: 48px 14px;
           }
 
           .teachers-collage {
@@ -401,6 +405,7 @@ export default function AboutPageDesign() {
           }
 
           .teachers-copy h2 {
+            font-size: 26px;
             margin-bottom: 18px;
           }
 

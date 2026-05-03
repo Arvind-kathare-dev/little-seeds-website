@@ -242,11 +242,15 @@ export default function OurGoal() {
 
         @media (max-width: 620px) {
           .our-goal-section {
-            padding: 104px 18px 56px !important;
+            padding: 94px 14px 48px !important;
+          }
+
+          .our-goal-shell h1 {
+            font-size: 28px;
           }
 
           .our-goal-intro {
-            margin: 20px auto 44px;
+            margin: 18px auto 36px;
             font-size: 12.5px;
           }
 
@@ -429,7 +433,11 @@ export default function OurGoal() {
 
         @media (max-width: 620px) {
           .school-booklet-section {
-            padding: 48px 18px 64px;
+            padding: 44px 14px 56px;
+          }
+
+          .school-booklet-shell h2 {
+            font-size: 24px;
           }
 
           .school-booklet-intro {

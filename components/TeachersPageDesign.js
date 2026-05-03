@@ -240,7 +240,7 @@ export default function TeachersPageDesign() {
 
         @media (max-width: 620px) {
           .teachers-page-section {
-            padding: 86px 18px 60px;
+            padding: 82px 14px 52px;
           }
 
           .teachers-page-hero {
@@ -249,7 +249,11 @@ export default function TeachersPageDesign() {
           }
 
           .teachers-page-content {
-            padding-top: 28px;
+            padding-top: 24px;
+          }
+
+          .teachers-page-content h1 {
+            font-size: 28px;
           }
 
           .teachers-page-copy {
@@ -424,12 +428,22 @@ export default function TeachersPageDesign() {
         @media (max-width: 620px) {
           .choosing-teachers-section,
           .teachers-training-section {
-            padding: 54px 18px;
+            padding: 48px 14px;
           }
 
           .choosing-teachers-shell,
           .teachers-training-shell {
             gap: 28px;
+          }
+
+          .choosing-teachers-intro h2,
+          .teachers-training-copy h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+          }
+
+          .choosing-teachers-intro h3 {
+            font-size: 14px;
           }
 
           .choosing-teachers-card {
