@@ -20,14 +20,14 @@ export default function GrowingLearnersDesign() {
           />
           <div className="growing-learners-overlay" />
           <div className="growing-learners-card-content">
-            <h2>Growing Confident, Kind &amp; Curious Learners</h2>
+            <h2 className="ls-title ls-on-dark">Growing Confident, Kind &amp; Curious Learners</h2>
             <a href="#programs">Explore Programs</a>
           </div>
         </div>
 
         <div className="growing-learners-copy">
           {copyBlocks.map((text) => (
-            <p key={text}>{text}</p>
+            <p key={text} className="ls-prose">{text}</p>
           ))}
         </div>
       </div>
@@ -83,16 +83,12 @@ export default function GrowingLearnersDesign() {
         }
 
         .growing-learners-card-content h2 {
-          // max-width: 370x;
           margin: 0;
-          color: #ffffff;
-          font-size: clamp(26px, 3.25vw, 44px);
-          font-weight: 600;
-          line-height: 1.3;
-          letter-spacing: -0.04em;
+          max-width: 380px;
         }
 
         .growing-learners-card-content a {
+          font-family: var(--ls-font-body, "DM Sans", sans-serif);
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -114,12 +110,8 @@ export default function GrowingLearnersDesign() {
         }
 
         .growing-learners-copy p {
-          color: #6b7476;
-          font-size: 15px;
-          font-weight: 500;
-          line-height: 1.45;
-          letter-spacing: 0.005em;
           margin: 0 0 34px;
+          line-height: 1.65;
         }
 
         .growing-learners-copy p:last-child {
@@ -139,7 +131,6 @@ export default function GrowingLearnersDesign() {
           }
 
           .growing-learners-copy p {
-            font-size: 12px;
             margin-bottom: 24px;
           }
         }
@@ -168,7 +159,6 @@ export default function GrowingLearnersDesign() {
 
           .growing-learners-card-content h2 {
             max-width: 260px;
-            font-size: clamp(24px, 8vw, 32px);
           }
 
           .growing-learners-card-content a {
@@ -183,8 +173,7 @@ export default function GrowingLearnersDesign() {
           }
 
           .growing-learners-copy p {
-            font-size: 12px;
-            line-height: 1.55;
+            line-height: 1.65;
             margin-bottom: 18px;
           }
         }

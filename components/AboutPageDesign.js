@@ -38,12 +38,12 @@ export default function AboutPageDesign() {
 
           <div className="about-page-content">
             <FadeIn delay={0.08}>
-              <h1>Who We Are</h1>
+              <h1 className="ls-title">Who We Are</h1>
             </FadeIn>
 
             <FadeIn delay={0.16}>
               <div className="about-page-copy">
-                <p>
+                <p className="ls-lead">
                 Little Seeds is a faith-centered learning community rooted in Islam, guided by love, and committed to nurturing the whole child. Our identity is built on balance where strong Islamic values, character development, and academic excellence come together without compromise. We believe children learn best when they feel safe, respected, and inspired, which is why we teach Islam with understanding and compassion, not pressure or fear. While proudly grounded in our Muslim identity, we warmly welcome families of all backgrounds, creating an environment of respect, inclusion, and purpose. At Little Seeds, we are more than a school we are a place where faith is lived daily, knowledge is nurtured intentionally, and children grow into confident, kind, and mindful individuals prepared for both this world and the next.
                 </p>
               </div>
@@ -53,8 +53,8 @@ export default function AboutPageDesign() {
       </section>
 
       <section
-        id="our-goal"
-        className="our-goal-section"
+        id="about-teachers"
+        className="about-teachers-band"
         style={{
           display: "flex",
           alignItems: "center",
@@ -62,7 +62,7 @@ export default function AboutPageDesign() {
           background: `linear-gradient(168deg, ${C.cream} 0%, ${C.tealLight} 50%, ${C.coralPale} 100%)`,
           position: "relative",
           overflow: "hidden",
-          padding: "80px 24px",
+          padding: "88px 24px",
         }}
       >
         <div className="teachers-shell teachers-shell-image-left">
@@ -82,9 +82,9 @@ export default function AboutPageDesign() {
 
           <FadeIn delay={0.12}>
             <div className="teachers-copy">
-              <h2>Teachers</h2>
+              <h2 className="ls-title">Teachers</h2>
               {teacherText.map((text) => (
-                <p key={text}>{text}</p>
+                <p key={text} className="ls-body">{text}</p>
               ))}
             </div>
           </FadeIn>
@@ -95,9 +95,9 @@ export default function AboutPageDesign() {
         <div className="teachers-shell teachers-shell-image-right">
           <FadeIn>
             <div className="teachers-copy">
-              <h2>Teachers</h2>
+              <h2 className="ls-title">Teachers</h2>
               {teacherText.map((text) => (
-                <p key={text}>{text}</p>
+                <p key={text} className="ls-body">{text}</p>
               ))}
             </div>
           </FadeIn>
@@ -121,17 +121,6 @@ export default function AboutPageDesign() {
       <GoalContactBanner/>
 
       <style>{`
-        .about-page-section h1,
-        .our-goal-section h2,
-        .teachers-section h2 {
-          font-family: "Playfair Display", serif;
-        }
-
-        .about-page-copy,
-        .teachers-copy p {
-          font-family: "DM Sans", sans-serif;
-        }
-
         .about-page-section {
           min-height: 100vh;
           display: flex;
@@ -178,17 +167,6 @@ export default function AboutPageDesign() {
 
         .about-page-content h1 {
           margin: 0;
-          color: ${C.text};
-          font-size: 36px;
-          font-weight: 700;
-          line-height: 1.08;
-        }
-
-        .about-page-copy {
-          color: ${C.textMuted};
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 1.7;
         }
 
         .about-page-copy p {
@@ -233,14 +211,6 @@ export default function AboutPageDesign() {
             padding-top: 24px;
           }
 
-          .about-page-content h1 {
-            font-size: 28px;
-          }
-
-          .about-page-copy {
-            font-size: 12.5px;
-            line-height: 1.65;
-          }
         }
 
         .teachers-section {
@@ -262,7 +232,7 @@ export default function AboutPageDesign() {
           display: grid;
           grid-template-columns: 1fr 1.08fr;
           align-items: center;
-          gap: 92px;
+          gap: 84px;
         }
 
         .teachers-shell-image-right {
@@ -317,28 +287,19 @@ export default function AboutPageDesign() {
         }
 
         .teachers-copy {
-          max-width: 520px;
+          max-width: 560px;
+          text-align: left;
         }
 
         .teachers-copy h2 {
           margin: 0 0 28px;
-          color: ${C.text};
-          font-size: clamp(30px, 3vw, 42px);
-          font-weight: 600;
-          line-height: 1.08;
-          letter-spacing: -0.04em;
         }
 
-        .teachers-copy p {
+        .teachers-copy p.ls-body {
           margin: 0 0 18px;
-          color: ${C.textMuted};
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 1.68;
-          letter-spacing: -0.018em;
         }
 
-        .teachers-copy p:last-child {
+        .teachers-copy p.ls-body:last-child {
           margin-bottom: 0;
         }
 
@@ -410,13 +371,7 @@ export default function AboutPageDesign() {
           }
 
           .teachers-copy h2 {
-            font-size: 26px;
             margin-bottom: 18px;
-          }
-
-          .teachers-copy p {
-            font-size: 12.5px;
-            line-height: 1.62;
           }
         }
       `}</style>

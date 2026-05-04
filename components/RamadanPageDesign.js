@@ -99,7 +99,7 @@ export default function RamadanPageDesign() {
               <span className="ramadan-page-hero-overlay" />
 
               <div className="ramadan-page-hero-content">
-                <h1>
+                <h1 className="ls-title ls-on-dark">
                   Saturday &amp; Sunday 
                   <span className="border-right"></span>
                    <span>11:00 AM - 3:00 PM</span>
@@ -114,12 +114,12 @@ export default function RamadanPageDesign() {
 
           <div className="ramadan-page-content">
             <FadeIn delay={0.08}>
-              <h2>Little Seeds Ramadan Program</h2>
+              <h2 className="ls-title">Little Seeds Ramadan Program</h2>
             </FadeIn>
 
             <FadeIn delay={0.16}>
               <div className="ramadan-page-copy">
-                <p>
+                <p className="ls-lead">
                   The Little Seeds Ramadan Program is a carefully designed weekend program that nurtures children’s faith, learning, and character during the blessed month of Ramadan. Through structured learning, reflection, and community engagement, children build a meaningful connection to the Quran and Islamic values in a warm and supportive environment.
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function RamadanPageDesign() {
       <section className="ramadan-subjects-section">
         <div className="ramadan-subjects-shell">
           <FadeIn>
-            <h2>Subjects Offered</h2>
+            <h2 className="ls-title">Subjects Offered</h2>
           </FadeIn>
 
           <div className="ramadan-subjects-grid">
@@ -141,7 +141,7 @@ export default function RamadanPageDesign() {
                   <div className="ramadan-subject-image">
                     <Image src={subject.image} alt={subject.title} fill sizes="(max-width: 700px) 100vw, 300px" />
                   </div>
-                  <h3>{subject.title}</h3>
+                  <h3 className="ls-card-title">{subject.title}</h3>
                   <ul>
                     {subject.points.map((point) => (
                       <li key={point}>{point}</li>
@@ -157,7 +157,7 @@ export default function RamadanPageDesign() {
       <section className="ramadan-groups-section">
         <div className="ramadan-groups-shell">
           <FadeIn>
-            <h2>Student Groups</h2>
+            <h2 className="ls-title">Student Groups</h2>
           </FadeIn>
 
           <div className="ramadan-groups-list">
@@ -168,7 +168,7 @@ export default function RamadanPageDesign() {
                     <Image src={group.image} alt={group.title} fill sizes="(max-width: 700px) 100vw, 180px" />
                   </div>
                   <div>
-                    <h3>{group.title}</h3>
+                    <h3 className="ls-card-title">{group.title}</h3>
                     <ul>
                       {group.points.map((point) => (
                         <li key={point}>{point}</li>
@@ -194,8 +194,8 @@ export default function RamadanPageDesign() {
           />
 
           <aside className="ramadan-visit-card">
-            <h2>Visit Us</h2>
-            <p>
+            <h2 className="ls-title">Visit Us</h2>
+            <p className="ls-prose">
               1420 River Park Dr, Suite 100,
               <br />
               Sacramento, CA 95815, USA
@@ -221,14 +221,14 @@ export default function RamadanPageDesign() {
 
           <FadeIn delay={0.12}>
             <div className="ramadan-tuition-copy">
-              <h2>Tuition &amp; Enrollment</h2>
+              <h2 className="ls-title">Tuition &amp; Enrollment</h2>
               <div className="ramadan-price">
                 <strong>$300</strong>
                 <span>/ per child</span>
                 <small>(Program Fee)</small>
               </div>
-              <p>The fee includes:</p>
-              <ul>
+              <p className="ls-prose">The fee includes:</p>
+              <ul className="ls-prose">
                 <li>Full Ramadan weekend program</li>
                 <li>Instructional materials and supplies</li>
                 <li>Structured learning, assemblies, and guided Salah</li>
@@ -241,17 +241,6 @@ export default function RamadanPageDesign() {
       <ContactSection/>
 
       <style>{`
-        .ramadan-page-section h1,
-        .ramadan-page-section h2,
-        .ramadan-subjects-section h2,
-        .ramadan-groups-section h2,
-        .ramadan-visit-card h2,
-        .ramadan-tuition-copy h2,
-        .ramadan-subject-card h3,
-        .ramadan-group-item h3 {
-          font-family: "Playfair Display", serif;
-        }
-
         .border-right {
           padding-right: 32px;
           height: 30px;
@@ -334,12 +323,6 @@ export default function RamadanPageDesign() {
 
         .ramadan-page-hero-content h1 {
           margin: 0 0 24px;
-          color: #ffffff;
-          font-size: clamp(24px, 3vw, 40px);
-          font-weight: 700;
-          line-height: 1.12;
-          letter-spacing: -0.04em;
-          text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
         }
 
         .ramadan-page-hero-content h1 span {
@@ -380,21 +363,11 @@ export default function RamadanPageDesign() {
 
         .ramadan-page-content h2 {
           margin: 0;
-          max-width: 360px;
-          color: ${C.text};
-          font-size: 36px;
-          font-weight: 600;
-          line-height: 1.08;
-          letter-spacing: -0.045em;
+          max-width: 420px;
         }
 
         .ramadan-page-copy {
           max-width: 590px;
-          color: ${C.textMuted};
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 1.68;
-          letter-spacing: -0.018em;
         }
 
         .ramadan-page-copy p {
@@ -432,7 +405,6 @@ export default function RamadanPageDesign() {
           }
 
           .ramadan-page-hero-content h1 {
-            font-size: 22px;
             margin-bottom: 18px;
           }
 
@@ -450,14 +422,6 @@ export default function RamadanPageDesign() {
             padding-top: 24px;
           }
 
-          .ramadan-page-content h2 {
-            font-size: 26px;
-          }
-
-          .ramadan-page-copy {
-            font-size: 12.5px;
-            line-height: 1.62;
-          }
         }
 
         .ramadan-subjects-section {
@@ -473,13 +437,8 @@ export default function RamadanPageDesign() {
 
         .ramadan-subjects-shell h2,
         .ramadan-groups-shell h2 {
-          margin: 0 0 36px;
-          color: ${C.text};
-          font-size: 36px;
-          font-weight: 600;
-          line-height: 1;
+          margin: 0 0 32px;
           text-align: center;
-          margin-bottom: 32px;
         }
 
         .ramadan-subjects-grid {
@@ -515,20 +474,15 @@ export default function RamadanPageDesign() {
         .ramadan-subject-card h3,
         .ramadan-group-item h3 {
           margin: 0 0 12px;
-          color: ${C.text};
-          font-size: 14px;
-          font-weight: 700;
-          line-height: 1.25;
         }
 
         .ramadan-subject-card ul,
         .ramadan-group-item ul {
           margin: 0;
           padding-left: 16px;
+          font-size: 14px;
+          line-height: 1.65;
           color: ${C.textMuted};
-          font-size: 11px;
-          font-weight: 500;
-          line-height: 1.72;
         }
 
         .ramadan-subject-card li,
@@ -580,14 +534,6 @@ export default function RamadanPageDesign() {
           background: #e8eee9;
         }
 
-        .ramadan-group-item h3 {
-          color: ${C.teal};
-          font-size: 18px;
-        }
-
-        .ramadan-group-item ul {
-          font-size: 14px;
-        }
 
         .ramadan-location-section {
           background: #ffffff;
@@ -627,18 +573,10 @@ export default function RamadanPageDesign() {
 
         .ramadan-visit-card h2 {
           margin: 0 0 24px;
-          color: ${C.text};
-          font-size: 26px;
-          font-weight: 600;
-          line-height: 1;
         }
 
         .ramadan-visit-card p {
-        margin-top:100px;
-          color: ${C.textMuted};
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 1.65;
+          margin-top: 100px;
         }
 
         .ramadan-tuition-section {
@@ -671,10 +609,6 @@ export default function RamadanPageDesign() {
 
         .ramadan-tuition-copy h2 {
           margin: 0 0 18px;
-          color: ${C.text};
-          font-size: 30px;
-          font-weight: 600;
-          line-height: 1.1;
         }
 
         .ramadan-price {
@@ -705,20 +639,18 @@ export default function RamadanPageDesign() {
           font-weight: 600;
         }
 
-        .ramadan-tuition-copy p {
+        .ramadan-tuition-copy p.ls-prose {
           margin: 0 0 10px;
-          color: ${C.text};
-          font-size: 14px;
           font-weight: 700;
+          color: ${C.text};
         }
 
         .ramadan-tuition-copy ul {
           margin: 0;
           padding-left: 16px;
-          color: ${C.textMuted};
           font-size: 14px;
-          font-weight: 500;
           line-height: 1.72;
+          color: ${C.textMuted};
         }
 
         @media (max-width: 900px) {
@@ -782,7 +714,6 @@ export default function RamadanPageDesign() {
 
           .ramadan-subjects-shell h2,
           .ramadan-groups-shell h2 {
-            font-size: 26px;
             margin-bottom: 28px;
           }
 
@@ -828,10 +759,6 @@ export default function RamadanPageDesign() {
             margin-bottom: 22px;
           }
 
-          .ramadan-visit-card h2,
-          .ramadan-tuition-copy h2 {
-            font-size: 24px;
-          }
         }
       `}</style>
     </>

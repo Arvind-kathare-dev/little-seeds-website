@@ -78,21 +78,21 @@ export default function TeachersPageDesign() {
 
           <div className="teachers-page-content">
             <FadeIn delay={0.08}>
-              <h1>OUR TEAM</h1>
+              <h1 className="ls-title">Our Team</h1>
             </FadeIn>
 
             <FadeIn delay={0.16}>
               <div className="teachers-page-copy">
-                <p>
+                <p className="ls-body">
                   Our teachers don’t just teach; they nurture with love, following the example of Prophet Muhammad (peace be upon him), who guided with mercy, patience, and understanding.
                 </p>
-                <p>
+                <p className="ls-body">
                   We believe education is not a job, but a calling; a sacred trust between teachers, children, and families.
                 </p>
-                <p>
+                <p className="ls-body">
                   At Little Seeds, our teachers do more than teach. They nurture, inspire, and guide each child with love and care. Following the example of Prophet Muhammad (peace be upon him), mercy, patience, and understanding are central to our teaching environment where children can grow spiritually, academically, and emotionally.
                 </p>
-                <p>
+                <p className="ls-body">
                   We believe that education is not just a job; it is a calling, a sacred trust between teachers, children, and families. Our educators are chosen for their passion, enthusiasm, and commitment to making a difference. Compassionate and mindful, young Muslims learn love, empathy, and respect in a guided, purposeful way, and the goal of helping each child reach their highest potential while fostering a genuine love for learning and for Islam.
                 </p>
               </div>
@@ -106,12 +106,12 @@ export default function TeachersPageDesign() {
         <div className="choosing-teachers-shell">
           <FadeIn>
             <div className="choosing-teachers-intro">
-              <h2>Choosing Our Teachers</h2>
-              <p>
+              <h2 className="ls-title">Choosing Our Teachers</h2>
+              <p className="ls-lead" style={{ maxWidth: 420 }}>
                 At Little Seeds, we carefully select teachers who are more than educators; they are mentors, guides, and role models who inspire children every day. Our team embodies the following qualities:
               </p>
-              <h3>Role Models of Faith and Character:</h3>
-              <p>
+              <h3 className="ls-card-title" style={{ fontSize: "clamp(16px, 1.8vw, 20px)" }}>Role Models of Faith and Character:</h3>
+              <p className="ls-prose">
               Beyond academics, our teachers embody Islamic values in their actions and interactions, inspiring children to live with integrity, kindness, and respect.
               </p>
             </div>
@@ -125,8 +125,8 @@ export default function TeachersPageDesign() {
                     <Image src={card.icon} alt="" width={24} height={24} />
                   </span>
                   <div>
-                    <h3>{card.title}</h3>
-                    <p>{card.text}</p>
+                    <h3 className="ls-card-title" style={{ fontSize: "clamp(15px, 1.6vw, 19px)" }}>{card.title}</h3>
+                    <p className="ls-prose">{card.text}</p>
                   </div>
                 </article>
               </FadeIn>
@@ -150,9 +150,9 @@ export default function TeachersPageDesign() {
 
           <FadeIn delay={0.12}>
             <div className="teachers-training-copy">
-              <h2>Teachers</h2>
+              <h2 className="ls-title">Teachers</h2>
               {teachersText.map((text) => (
-                <p key={text}>{text}</p>
+                <p key={text} className="ls-body">{text}</p>
               ))}
             </div>
           </FadeIn>
@@ -162,18 +162,8 @@ export default function TeachersPageDesign() {
       <GoalContactBanner/>
 
       <style>{`
-        .teachers-page-section h1,
-        .choosing-teachers-section h2,
-        .teachers-training-section h2,
-        .choosing-teachers-card h3 {
-          font-family: "Playfair Display", serif;
-        }
-
-        .teachers-page-copy,
-        .choosing-teachers-intro p,
-        .choosing-teachers-card p,
-        .teachers-training-copy p {
-          font-family: "DM Sans", sans-serif;
+        .teachers-page-section {
+          padding: 98px 24px 90px;
         }
 
         .teachers-page-shell {
@@ -198,46 +188,39 @@ export default function TeachersPageDesign() {
 
         .teachers-page-hero-overlay {
           position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.44);
           pointer-events: none;
         }
 
         .teachers-page-content {
           display: grid;
-          grid-template-columns: 0.82fr 1.18fr;
+          grid-template-columns: 0.85fr 1.45fr;
           align-items: start;
-          gap: 96px;
-          padding-top: 42px;
+          gap: 84px;
+          padding-top: 44px;
         }
 
         .teachers-page-content h1 {
           margin: 0;
-          color: ${C.text};
-          font-size: 36px;
-          font-weight: 600;
-          line-height: 1;
-          margin-bottom: 32px;
         }
 
         .teachers-page-copy {
           max-width: 560px;
-          color: ${C.textMuted};
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 1.68;
-          letter-spacing: -0.018em;
+          text-align: left;
         }
 
-        .teachers-page-copy p {
+        .teachers-page-copy p.ls-body {
           margin: 0 0 18px;
         }
 
-        .teachers-page-copy p:last-child {
+        .teachers-page-copy p.ls-body:last-child {
           margin-bottom: 0;
         }
 
         @media (max-width: 900px) {
           .teachers-page-section {
-            padding: 92px 22px 74px;
+            padding: 92px 22px 72px;
           }
 
           .teachers-page-hero {
@@ -246,7 +229,7 @@ export default function TeachersPageDesign() {
 
           .teachers-page-content {
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: 22px;
             padding-top: 34px;
           }
 
@@ -257,25 +240,16 @@ export default function TeachersPageDesign() {
 
         @media (max-width: 620px) {
           .teachers-page-section {
-            padding: 82px 14px 52px;
+            padding: 82px 14px 50px;
           }
 
           .teachers-page-hero {
             height: 190px;
-            border-radius: 8px;
+            border-radius: 4px;
           }
 
           .teachers-page-content {
             padding-top: 24px;
-          }
-
-          .teachers-page-content h1 {
-            font-size: 28px;
-          }
-
-          .teachers-page-copy {
-            font-size: 12.5px;
-            line-height: 1.62;
           }
         }
 
@@ -295,30 +269,20 @@ export default function TeachersPageDesign() {
         }
 
         .choosing-teachers-intro h2 {
-          margin: 0 0 20px;
-          color: ${C.text};
-          font-size: 36px;
-          font-weight: 600;
-          line-height: 1;
-          margin-bottom: 32px;
+          margin: 0 0 32px;
         }
 
         .choosing-teachers-intro h3 {
           margin: 24px 0 8px;
-          color: ${C.text};
-          font-size: 15px;
-          font-weight: 700;
-          line-height: 1.2;
         }
 
         .choosing-teachers-intro p {
           margin: 0;
           max-width: 420px;
-          color: ${C.textMuted};
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 1.65;
-          letter-spacing: -0.018em;
+        }
+
+        .choosing-teachers-intro p.ls-prose {
+          margin-top: 0;
         }
 
         .choosing-teachers-cards {
@@ -351,23 +315,15 @@ export default function TeachersPageDesign() {
 
         .choosing-teachers-card h3 {
           margin: 0 0 8px;
-          color: ${C.text};
-          font-size: 14px;
-          font-weight: 700;
-          line-height: 1.25;
         }
 
         .choosing-teachers-card p {
           margin: 0;
-          color: ${C.textMuted};
-          font-size: 12px;
-          font-weight: 500;
-          line-height: 1.55;
         }
 
         .teachers-training-section {
           background: #f2f8f0;
-          padding: 78px 24px 86px;
+          padding: 88px 24px;
         }
 
         .teachers-training-shell {
@@ -375,18 +331,20 @@ export default function TeachersPageDesign() {
           max-width: 1100px;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: 360px 1fr;
-          gap: 76px;
+          grid-template-columns: minmax(0, 360px) 1fr;
+          gap: 84px;
           align-items: center;
         }
 
         .teachers-training-image {
           position: relative;
-          width: 360px;
+          width: 100%;
+          max-width: 360px;
           height: 300px;
           overflow: hidden;
-          border-radius: 10px;
+          border-radius: 20px;
           background: #e7ece7;
+          box-shadow: 0 14px 28px rgba(31, 37, 39, 0.08);
         }
 
         .teachers-training-image img {
@@ -395,32 +353,26 @@ export default function TeachersPageDesign() {
 
         .teachers-training-copy {
           max-width: 560px;
+          text-align: left;
         }
 
         .teachers-training-copy h2 {
-          margin: 0 0 26px;
-          color: ${C.text};
-          font-size: 36px;
-          font-weight: 600;
-          line-height: 1;
-          margin-bottom: 32px;
+          margin: 0 0 28px;
         }
 
-        .teachers-training-copy p {
+        .teachers-training-copy p.ls-body {
           margin: 0 0 18px;
-          color: ${C.textMuted};
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 1.66;
-          letter-spacing: -0.018em;
         }
 
-        .teachers-training-copy p:last-child {
+        .teachers-training-copy p.ls-body:last-child {
           margin-bottom: 0;
         }
 
         @media (max-width: 900px) {
-          .choosing-teachers-section,
+          .choosing-teachers-section {
+            padding: 70px 22px;
+          }
+
           .teachers-training-section {
             padding: 70px 22px;
           }
@@ -455,12 +407,7 @@ export default function TeachersPageDesign() {
 
           .choosing-teachers-intro h2,
           .teachers-training-copy h2 {
-            font-size: 26px;
             margin-bottom: 20px;
-          }
-
-          .choosing-teachers-intro h3 {
-            font-size: 14px;
           }
 
           .choosing-teachers-card {
@@ -469,11 +416,6 @@ export default function TeachersPageDesign() {
             padding: 18px 16px;
           }
 
-          .choosing-teachers-card p,
-          .teachers-training-copy p {
-            font-size: 12.5px;
-            line-height: 1.62;
-          }
 
           .teachers-training-image {
             width: 100%;

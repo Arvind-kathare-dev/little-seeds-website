@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { C } from "./constants";
 
 const principles = [
   {
@@ -32,7 +33,7 @@ function renderText(item) {
   return (
     <>
       {before}
-      <span>{item.highlight}</span>
+      <span className="core-principle-highlight">{item.highlight}</span>
       {after}
     </>
   );
@@ -42,13 +43,17 @@ export default function CorePrinciplesDesign() {
   return (
     <section className="core-principles-section" aria-labelledby="core-principles-title">
       <div className="core-principles-shell">
-        <h2 id="core-principles-title">Our Core Principles</h2>
+        <h2 id="core-principles-title" className="ls-title">
+          Our Core Principles
+        </h2>
 
         <div className="core-principles-grid">
           {principles.map((item) => (
             <article className="core-principle-card" key={item.text}>
-              <Image className="core-principle-icon" src={item.icon} alt="" width={43} height={43} />
-              <p>{renderText(item)}</p>
+              <div className="core-principle-icon-wrap">
+                <Image className="core-principle-icon" src={item.icon} alt="" width={43} height={43} />
+              </div>
+              <p className="ls-prose core-principle-text">{renderText(item)}</p>
             </article>
           ))}
         </div>
@@ -56,8 +61,8 @@ export default function CorePrinciplesDesign() {
 
       <style>{`
         .core-principles-section {
-          background: #FCB19726;
-          padding: 77px 24px 72px;
+          background: linear-gradient(180deg, ${C.coralPale} 0%, ${C.warm} 100%);
+          padding: 88px 24px 80px;
         }
 
         .core-principles-shell {
@@ -68,75 +73,101 @@ export default function CorePrinciplesDesign() {
         }
 
         .core-principles-shell h2 {
-          margin: 0 0 74px;
-          color: #2c3032;
-          font-size: clamp(30px, 3vw, 41px);
-          font-weight: 700;
-          line-height: 1.1;
-          letter-spacing: -0.03em;
+          margin: 0 0 52px;
         }
 
         .core-principles-grid {
           display: grid;
           grid-template-columns: repeat(5, minmax(0, 1fr));
-          gap: 12px;
+          gap: 18px;
+          align-items: stretch;
         }
 
         .core-principle-card {
-          min-height: 158px;
-          padding: 35px 24px 24px;
-          border: 1px solid #ccd2d1;
-          border-radius: 7px;
-          background: rgba(255, 255, 255, 0.82);
+          min-height: 176px;
+          height: 100%;
+          padding: 28px 16px 24px;
+          border-radius: 18px;
+          border: 1px solid ${C.teal}14;
+          background: ${C.white};
+          box-shadow: 0 10px 36px rgba(45, 52, 54, 0.06);
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;
+          transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+        }
+
+        .core-principle-card:hover {
+          border-color: ${C.teal}33;
+          box-shadow: 0 16px 44px rgba(47, 127, 125, 0.1);
+          transform: translateY(-2px);
+        }
+
+        .core-principle-icon-wrap {
+          width: 56px;
+          height: 56px;
+          border-radius: 14px;
+          background: ${C.tealLight};
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 18px;
         }
 
         .core-principle-icon {
-          width: 52px;
-          height: 52px;
-          margin-bottom: 20px;
+          width: 40px;
+          height: 40px;
           object-fit: contain;
         }
 
-        .core-principle-card p {
-          max-width: 160px;
+        .core-principle-text {
+          max-width: 168px;
           margin: 0;
-          color: #2e3839;
-          font-size: 14px;
           font-weight: 500;
-          line-height: 1.24;
-          letter-spacing: -0.01em;
+          line-height: 1.5;
+          text-align: center;
         }
 
-        .core-principle-card p span {
-          color: #2f9b9a;
+        .core-principle-highlight {
+          color: ${C.teal};
+          font-weight: 600;
         }
 
         @media (max-width: 900px) {
           .core-principles-section {
-            padding: 60px 20px;
+            padding: 64px 20px 56px;
           }
 
           .core-principles-shell h2 {
-            margin-bottom: 42px;
+            margin-bottom: 40px;
           }
 
           .core-principles-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
+            gap: 16px;
+          }
+
+          .core-principle-card {
+            min-height: 0;
+            padding: 26px 18px 22px;
+          }
+
+          .core-principle-text {
+            max-width: 100%;
           }
         }
 
         @media (max-width: 520px) {
           .core-principles-grid {
             grid-template-columns: 1fr;
+            gap: 14px;
           }
+        }
 
-          .core-principle-card {
-            min-height: 150px;
+        @media (hover: none) {
+          .core-principle-card:hover {
+            transform: none;
           }
         }
       `}</style>

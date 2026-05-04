@@ -23,13 +23,13 @@ export default function BrightRootsDesign() {
 
         <div className="bright-roots-content">
           <div className="bright-roots-heading">
-            <h1>Nurturing Bright Minds Growing Strong Roots</h1>
-            <p>A Loving, Academic-and-Values-Driven Early Childhood Experience in Sacramento.</p>
+            <h1 className="ls-title">Nurturing Bright Minds Growing Strong Roots</h1>
+            <p className="ls-lead bright-roots-tagline">A Loving, Academic-and-Values-Driven Early Childhood Experience in Sacramento.</p>
           </div>
 
           <div className="bright-roots-copy">
             {paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph} className="ls-prose">{paragraph}</p>
             ))}
           </div>
         </div>
@@ -73,22 +73,14 @@ export default function BrightRootsDesign() {
         }
 
         .bright-roots-heading h1 {
-          color: #202020;
-          font-size: clamp(26px, 3.2vw, 38px);
-          font-weight: 700;
-          line-height: 1.3;
-          letter-spacing: -0.045em;
           margin: 0 0 18px;
-          max-width: 370px;
+          max-width: 420px;
         }
 
-        .bright-roots-heading p {
-          color: #262626;
-          font-size: 12px;
-          font-weight: 700;
-          line-height: 1.35;
+        .bright-roots-tagline {
           margin: 0;
-          max-width: 292px;
+          max-width: 360px;
+          font-weight: 500;
         }
 
         .bright-roots-copy {
@@ -96,11 +88,6 @@ export default function BrightRootsDesign() {
         }
 
         .bright-roots-copy p {
-          color: #6d7477;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 1.48;
-          letter-spacing: -0.01em;
           margin: 0 0 17px;
         }
 
@@ -125,16 +112,8 @@ export default function BrightRootsDesign() {
           }
 
           .bright-roots-heading h1,
-          .bright-roots-heading p {
+          .bright-roots-tagline {
             max-width: none;
-          }
-
-          .bright-roots-heading h1 {
-            line-height: 1.05;
-          }
-
-          .bright-roots-copy p {
-            font-size: 12px;
           }
         }
       `}</style>

@@ -20,8 +20,8 @@ export default function AboutSection() {
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <Image src="/logo-transparent.png" alt="" width={140} height={70} style={{ height: 70, width: "auto", margin: "0 auto 12px", display: "block" }} />
             <SectionLabel text="About Us" color={C.teal} />
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(26px, 4vw, 38px)", fontWeight: 700, color: C.text, margin: "10px 0 16px" }}>Rooted in Faith, Growing Together</h2>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, lineHeight: 1.75, color: C.textMuted, maxWidth: 680, margin: "0 auto" }}>
+            <h2 className="ls-title" style={{ margin: "10px 0 16px" }}>Rooted in Faith, Growing Together</h2>
+            <p className="ls-lead" style={{ maxWidth: 680, margin: "0 auto" }}>
               Little Seeds was founded on a simple belief: every child deserves a nurturing environment where faith, character, and curiosity grow hand in hand. We are a community-driven learning center serving families across all backgrounds.
             </p>
           </div>
@@ -32,8 +32,8 @@ export default function AboutSection() {
             <FadeIn key={i} delay={i * 0.1}>
               <div style={{ background: c.bg, borderRadius: 18, padding: "28px 24px", height: "100%" }}>
                 <div style={{ marginBottom: 12 }}>{c.icon}</div>
-                <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 17, fontWeight: 700, color: C.text, margin: "0 0 10px" }}>{c.title}</h3>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, lineHeight: 1.7, color: C.textMuted, margin: 0 }}>{c.text}</p>
+                <h3 className="ls-card-title" style={{ margin: "0 0 10px" }}>{c.title}</h3>
+                <p className="ls-prose" style={{ lineHeight: 1.7, margin: 0 }}>{c.text}</p>
               </div>
             </FadeIn>
           ))}

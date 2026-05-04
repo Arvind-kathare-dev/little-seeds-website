@@ -27,7 +27,7 @@ export default function Hero() {
         </FadeIn>
 
         <FadeIn delay={0.12}>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(34px, 6vw, 60px)", fontWeight: 700, lineHeight: 1.12, color: C.text, margin: "0 0 8px" }}>
+          <h1 className="ls-hero-title" style={{ margin: "0 0 8px" }}>
             Nurturing Every{" "}
             <span style={{ color: C.teal, position: "relative" }}>
               Little Seed
@@ -39,7 +39,7 @@ export default function Hero() {
         </FadeIn>
 
         <FadeIn delay={0.25}>
-          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "clamp(15px, 2.2vw, 19px)", color: C.textMuted, lineHeight: 1.7, maxWidth: 540, margin: "16px auto 36px" }}>
+          <p className="ls-lead" style={{ maxWidth: 540, margin: "16px auto 36px" }}>
             Faith-centered learning programs for children ages toddler through 6th grade. Daycare, Islamic education, and enrichment — all under one nurturing roof.
           </p>
         </FadeIn>

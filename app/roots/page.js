@@ -44,10 +44,10 @@ export default function RootsPage() {
           <div style={{ display: "flex", gap: 48, alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ flex: "1 1 400px" }}>
               <SectionLabel text="Roots Program" color={C.teal} />
-              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, color: C.text, margin: "10px 0 14px", lineHeight: 1.15 }}>
+              <h1 className="ls-title" style={{ margin: "10px 0 14px" }}>
                 Grounding Children in Faith
               </h1>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, lineHeight: 1.75, color: C.textMuted, margin: "0 0 24px" }}>
+              <p className="ls-lead" style={{ margin: "0 0 24px" }}>
                 The Roots Program is designed for Muslim children ages 3 – 14. Through engaging, age-appropriate Islamic education, we help young learners build a strong spiritual foundation for life.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
@@ -66,13 +66,13 @@ export default function RootsPage() {
       {/* Sub-programs */}
       <section style={{ padding: "60px 24px", background: C.white }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 28, fontWeight: 700, color: C.text, marginBottom: 28 }}>Programs Within Roots</h2>
+          <h2 className="ls-title" style={{ marginBottom: 28 }}>Programs Within Roots</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
             {SUB_PROGRAMS.map((c, i) => (
               <div key={i} style={{ background: c.bg, borderRadius: 18, padding: "28px 24px", border: `1px solid ${c.color}15` }}>
                 <div style={{ marginBottom: 12 }}>{c.icon}</div>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 17, fontWeight: 700, color: C.text, margin: "0 0 10px" }}>{c.title}</h3>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, lineHeight: 1.7, color: C.textMuted, margin: 0 }}>{c.text}</p>
+                <h3 className="ls-card-title" style={{ fontSize: 17, margin: "0 0 10px" }}>{c.title}</h3>
+                <p className="ls-prose" style={{ lineHeight: 1.7, margin: 0 }}>{c.text}</p>
               </div>
             ))}
           </div>

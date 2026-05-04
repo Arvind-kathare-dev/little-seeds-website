@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import FadeIn from "./FadeIn";
-import { C } from "./constants";
 import galleryImage1 from "@/public/pictures/pictures1.png";
 import galleryImage2 from "@/public/pictures/pictures2.png";
 import galleryImage3 from "@/public/pictures/pictures3.png";
@@ -56,7 +55,7 @@ export default function PicturesPageDesign() {
     <section className="pictures-page-section">
       <div className="pictures-page-shell">
         <FadeIn>
-          <h1>Pictures</h1>
+          <h1 className="ls-title">Pictures</h1>
         </FadeIn>
 
         <div className="pictures-grid">
@@ -105,10 +104,6 @@ export default function PicturesPageDesign() {
       )}
 
       <style>{`
-        .pictures-page-shell h1 {
-          font-family: "Playfair Display", serif;
-        }
-
         .pictures-page-section,
         .pictures-lightbox-arrow {
           font-family: "DM Sans", sans-serif;
@@ -128,12 +123,7 @@ export default function PicturesPageDesign() {
         }
 
         .pictures-page-shell h1 {
-          margin: 0;
-          color: ${C.text};
-          font-size: 36px;
-          font-weight: 600;
-          line-height: 1;
-          margin-bottom: 42px;
+          margin: 0 0 42px;
         }
 
         .pictures-grid {

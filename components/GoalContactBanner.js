@@ -9,7 +9,7 @@ export default function GoalContactBanner() {
 
       <FadeIn>
         <div className="goal-contact-content">
-          <h2>Plant faith and knowledge. Grow purpose and light.</h2>
+          <h2 className="ls-title ls-on-dark">Plant faith and knowledge. Grow purpose and light.</h2>
 
           <div className="goal-contact-card">
             <a className="goal-contact-item" href="tel:+14086066742">
@@ -41,10 +41,6 @@ export default function GoalContactBanner() {
       </FadeIn>
 
       <style>{`
-        .goal-contact-content h2 {
-          font-family: "Playfair Display", serif;
-        }
-
         .goal-contact-item small,
         .goal-contact-item strong {
           font-family: "DM Sans", sans-serif;
@@ -82,12 +78,6 @@ export default function GoalContactBanner() {
 
         .goal-contact-content h2 {
           margin: 0 0 32px;
-          color: #ffffff;
-          font-size: clamp(24px, 3vw, 36px);
-          font-weight: 700;
-          line-height: 1.16;
-          letter-spacing: -0.04em;
-          text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
         }
 
         .goal-contact-card {

@@ -47,10 +47,10 @@ export default function EnrichmentPage() {
           <div style={{ display: "flex", gap: 48, alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ flex: "1 1 400px" }}>
               <SectionLabel text="Enrichment Programs" color={C.sage} />
-              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, color: C.text, margin: "10px 0 14px", lineHeight: 1.15 }}>
+              <h1 className="ls-title" style={{ margin: "10px 0 14px" }}>
                 Year-Round Growth & Fun
               </h1>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, lineHeight: 1.75, color: C.textMuted, margin: "0 0 24px" }}>
+              <p className="ls-lead" style={{ margin: "0 0 24px" }}>
                 Our Enrichment Programs support families year-round with flexible, engaging options — summer break, off-track weeks, or before and after school care.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
@@ -100,8 +100,8 @@ export default function EnrichmentPage() {
                 {sub.icon}
               </div>
               <div style={{ flex: 1, minWidth: 240 }}>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: C.text, margin: "0 0 10px" }}>{sub.title}</h3>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14.5, lineHeight: 1.7, color: C.textMuted, margin: "0 0 14px" }}>{sub.desc}</p>
+                <h3 className="ls-card-title" style={{ fontSize: 22, margin: "0 0 10px" }}>{sub.title}</h3>
+                <p className="ls-prose" style={{ fontSize: 14.5, lineHeight: 1.7, margin: "0 0 14px" }}>{sub.desc}</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {sub.tags.map((t) => (
                     <span

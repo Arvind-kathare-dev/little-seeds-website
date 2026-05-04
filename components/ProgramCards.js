@@ -19,8 +19,8 @@ export default function ProgramCards() {
         <FadeIn>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <SectionLabel text="Our Programs" />
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: C.text, margin: "10px 0 0" }}>Three Pathways, One Purpose</h2>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, color: C.textMuted, marginTop: 8 }}>Every program is built around care, community, and growth.</p>
+            <h2 className="ls-title" style={{ margin: "10px 0 0" }}>Three Pathways, One Purpose</h2>
+            <p className="ls-lead" style={{ marginTop: 8 }}>Every program is built around care, community, and growth.</p>
           </div>
         </FadeIn>
 
@@ -44,9 +44,9 @@ export default function ProgramCards() {
                 <div style={{ height: 200, overflow: "hidden" }}><prog.Illustration /></div>
                 <div style={{ padding: "24px 28px 28px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, color: prog.color, letterSpacing: ".1em", textTransform: "uppercase" }}>{prog.tagline}</span>
-                  <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: C.text, margin: "8px 0 4px" }}>{prog.title}</h3>
+                  <h3 className="ls-card-title" style={{ fontSize: 22, margin: "8px 0 4px" }}>{prog.title}</h3>
                   <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, color: prog.color, margin: "0 0 10px" }}>{prog.subtitle}</p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14.5, lineHeight: 1.65, color: C.textMuted, margin: 0, flex: 1 }}>{prog.desc}</p>
+                  <p className="ls-prose" style={{ fontSize: 14.5, margin: 0, flex: 1 }}>{prog.desc}</p>
                   <div style={{ marginTop: 18, display: "flex", alignItems: "center", gap: 6, fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, color: prog.color }}>
                     Learn More
                     <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" stroke={prog.color} strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>

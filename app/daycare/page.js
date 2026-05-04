@@ -27,10 +27,10 @@ export default function DaycarePage() {
           <div style={{ display: "flex", gap: 48, alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ flex: "1 1 400px" }}>
               <SectionLabel text="Daycare Program" color={C.coral} />
-              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, color: C.text, margin: "10px 0 14px", lineHeight: 1.15 }}>
+              <h1 className="ls-title" style={{ margin: "10px 0 14px" }}>
                 A Safe, Loving Start for Every Child
               </h1>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, lineHeight: 1.75, color: C.textMuted, margin: "0 0 24px" }}>
+              <p className="ls-lead" style={{ margin: "0 0 24px" }}>
                 Our Daycare Program welcomes families of all backgrounds. We provide a nurturing, structured environment where toddlers through Kindergarten-age children learn through play, build friendships, and develop the confidence to thrive.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
@@ -49,13 +49,13 @@ export default function DaycarePage() {
       {/* What We Offer */}
       <section style={{ padding: "60px 24px", background: C.white }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 28, fontWeight: 700, color: C.text, marginBottom: 28 }}>What We Offer</h2>
+          <h2 className="ls-title" style={{ marginBottom: 28 }}>What We Offer</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20 }}>
             {OFFERS.map((c, i) => (
               <div key={i} style={{ background: C.coralPale, borderRadius: 16, padding: "24px 20px" }}>
                 <div style={{ marginBottom: 10 }}>{c.icon}</div>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 16, fontWeight: 700, color: C.text, margin: "0 0 8px" }}>{c.title}</h3>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, lineHeight: 1.65, color: C.textMuted, margin: 0 }}>{c.text}</p>
+                <h3 className="ls-card-title" style={{ fontSize: 16, margin: "0 0 8px" }}>{c.title}</h3>
+                <p className="ls-prose" style={{ margin: 0 }}>{c.text}</p>
               </div>
             ))}
           </div>

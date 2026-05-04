@@ -99,11 +99,11 @@ export default function OurGoal() {
 
         <div className="our-goal-shell">
           <FadeIn>
-            <h1>Our Goal</h1>
+            <h1 className="ls-title">Our Goal</h1>
           </FadeIn>
 
           <FadeIn delay={0.12}>
-            <p className="our-goal-intro">
+            <p className="our-goal-intro ls-lead">
               We provide a faith-centered, inclusive learning environment rooted in Islamic values and modern education.
             </p>
           </FadeIn>
@@ -113,7 +113,7 @@ export default function OurGoal() {
               <FadeIn delay={0.08 * index} key={card.text}>
                 <article className="our-goal-card">
                   <div className="our-goal-icon">{card.icon}</div>
-                  <p>{card.text}</p>
+                  <p className="ls-prose">{card.text}</p>
                 </article>
               </FadeIn>
             ))}
@@ -124,8 +124,8 @@ export default function OurGoal() {
       <section className="school-booklet-section" aria-labelledby="school-booklet-title">
         <div className="school-booklet-shell">
           <FadeIn>
-            <h2 id="school-booklet-title">School Booklet Overview</h2>
-            <p className="school-booklet-intro">
+            <h2 id="school-booklet-title" className="ls-title">School Booklet Overview</h2>
+            <p className="school-booklet-intro ls-lead">
               The Little Seeds School Booklet provides parents with everything they need to know about our programs and philosophy.
             </p>
           </FadeIn>
@@ -145,8 +145,8 @@ export default function OurGoal() {
                     <span className="school-booklet-hover" />
                   </div>
                   <div className="school-booklet-copy">
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
+                    <h3 className="ls-card-title">{card.title}</h3>
+                    <p className="ls-prose">{card.description}</p>
                   </div>
                 </article>
               </FadeIn>
@@ -158,19 +158,6 @@ export default function OurGoal() {
       <GoalContactBanner />
 
       <style>{`
-        .our-goal-section h1,
-        .school-booklet-section h2,
-        .school-booklet-card h3 {
-          font-family: "Playfair Display", serif;
-        }
-
-        .our-goal-intro,
-        .our-goal-card p,
-        .school-booklet-intro,
-        .school-booklet-card p {
-          font-family: "DM Sans", sans-serif;
-        }
-
         .our-goal-shell {
           position: relative;
           z-index: 1;
@@ -182,21 +169,11 @@ export default function OurGoal() {
 
         .our-goal-shell h1 {
           margin: 0;
-          color: ${C.text};
-          font-size: clamp(30px, 5vw, 42px);
-          font-weight: 600;
-          line-height: 1;
-          letter-spacing: -0.045em;
         }
 
         .our-goal-intro {
-        max-width: 300px;
+          max-width: 520px;
           margin: 28px auto 112px;
-          color: ${C.textMuted};
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 1.35;
-          letter-spacing: -0.02em;
         }
 
         .our-goal-grid {
@@ -226,11 +203,7 @@ export default function OurGoal() {
         .our-goal-card p {
           max-width: 220px;
           margin: 0 auto;
-          color: ${C.textMuted};
-          font-size: 12px;
-          font-weight: 500;
-          line-height: 1.35;
-          letter-spacing: -0.018em;
+          font-size: 14px;
         }
 
         @media (max-width: 900px) {
@@ -248,13 +221,8 @@ export default function OurGoal() {
             padding: 94px 14px 48px !important;
           }
 
-          .our-goal-shell h1 {
-            font-size: 28px;
-          }
-
           .our-goal-intro {
             margin: 18px auto 36px;
-            font-size: 12.5px;
           }
 
           .our-goal-grid {
@@ -277,22 +245,11 @@ export default function OurGoal() {
         }
 
         .school-booklet-shell h2 {
-          margin: 0 0 6px;
-          color: ${C.text};
-          font-size: clamp(25px, 3vw, 33px);
-          font-weight: 600;
-          line-height: 1.05;
-          margin-bottom: 12px;
-          letter-spacing: -0.04em;
+          margin: 0 0 12px;
         }
 
         .school-booklet-intro {
           margin: 0 0 36px;
-          color: ${C.textMuted};
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 1.45;
-          letter-spacing: -0.02em;
         }
 
         .school-booklet-grid {
@@ -366,21 +323,14 @@ export default function OurGoal() {
 
         .school-booklet-card h3 {
           margin: 0;
-          color: ${C.text};
-          font-size: 15px;
-          font-weight: 600;
-          line-height: 1.1;
-          letter-spacing: -0.025em;
+          font-size: clamp(17px, 2vw, 20px);
         }
 
         .school-booklet-card p {
           max-width: 220px;
           margin: 4px 0 0;
-          color: ${C.textMuted};
-          font-size: 12px;
-          font-weight: 500;
+          font-size: 13px;
           line-height: 1.45;
-          letter-spacing: -0.018em;
           opacity: 0;
           max-height: 0;
           overflow: hidden;
@@ -440,13 +390,8 @@ export default function OurGoal() {
             padding: 44px 14px 56px;
           }
 
-          .school-booklet-shell h2 {
-            font-size: 24px;
-          }
-
           .school-booklet-intro {
             margin-bottom: 24px;
-            font-size: 10.5px;
           }
 
           .school-booklet-grid {
@@ -465,7 +410,7 @@ export default function OurGoal() {
 
           .school-booklet-card p {
             max-width: 100%;
-            font-size: 9px;
+            font-size: 13px;
             opacity: 1;
             max-height: 40px;
             transform: none;

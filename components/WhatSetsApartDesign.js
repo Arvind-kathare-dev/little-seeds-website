@@ -25,7 +25,7 @@ export default function WhatSetsApartDesign() {
   return (
     <section className="sets-apart-section" aria-labelledby="sets-apart-title">
       <div className="sets-apart-shell">
-        <h2 id="sets-apart-title">What Sets Little Seeds Apart</h2>
+        <h2 id="sets-apart-title" className="ls-title">What Sets Little Seeds Apart</h2>
 
         <div className="sets-apart-stage">
           <div className="sets-apart-image sets-apart-image-left">
@@ -35,7 +35,7 @@ export default function WhatSetsApartDesign() {
           <div className="sets-apart-card" aria-live="polite">
             <div className="sets-apart-text-wrap">
               {apartTexts.map((text, index) => (
-                <p className={activeText === index ? "active" : ""} key={text}>
+                <p className={`ls-prose${activeText === index ? " active" : ""}`} key={text}>
                   {text}
                 </p>
               ))}
@@ -80,12 +80,7 @@ export default function WhatSetsApartDesign() {
         }
 
         .sets-apart-shell h2 {
-         margin: 0 0 74px;
-          color: #2c3032;
-          font-size: clamp(30px, 3vw, 41px);
-          font-weight: 700;
-          line-height: 1.1;
-          letter-spacing: -0.03em;
+          margin: 0 0 74px;
         }
 
         .sets-apart-stage {
@@ -150,11 +145,6 @@ export default function WhatSetsApartDesign() {
         .sets-apart-card p {
           grid-area: 1 / 1;
           margin: 0;
-          color: #202729;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 1.45;
-          letter-spacing: -0.015em;
           text-align: center;
           opacity: 0;
           transform: translateY(8px);
@@ -229,7 +219,6 @@ export default function WhatSetsApartDesign() {
         @media (max-width: 640px) {
           .sets-apart-shell h2 {
             margin-bottom: 30px;
-            font-size: clamp(30px, 9vw, 40px);
           }
 
           .sets-apart-stage {
