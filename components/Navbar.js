@@ -79,11 +79,11 @@ export default function Navbar() {
 
         <div className="ls-nav-d" style={{ display: "flex", gap: 26, alignItems: "center" }}>
           <Link href="/" style={pageLinkStyle("/")}>Home</Link>
-          <Link href="/" style={pageLinkStyle("/about")}>About Us</Link>
-          <Link href="/" style={pageLinkStyle("/our-goal")}>Our Goal</Link>
-          <Link href="/" style={pageLinkStyle("/pictures")}>Pictures</Link>
-          <Link href="/" style={pageLinkStyle("/teachers")}>Teachers</Link>
-          <Link href="/" style={pageLinkStyle("/ramadan")}>Ramadan</Link>
+          <Link href="/about" style={pageLinkStyle("/about")}>About Us</Link>
+          <Link href="/our-goal" style={pageLinkStyle("/our-goal")}>Our Goal</Link>
+          <Link href="/pictures" style={pageLinkStyle("/pictures")}>Pictures</Link>
+          <Link href="/teachers" style={pageLinkStyle("/teachers")}>Teachers</Link>
+          <Link href="/ramadan" style={pageLinkStyle("/ramadan")}>Ramadan</Link>
 
            {/* <button onClick={() => scrollTo("programs")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>Programs</button>
           <button onClick={() => scrollTo("about")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>About</button>
