@@ -54,7 +54,7 @@ export default function DaycarePage() {
             {OFFERS.map((c, i) => (
               <div key={i} style={{ background: C.coralPale, borderRadius: 16, padding: "24px 20px" }}>
                 <div style={{ marginBottom: 10 }}>{c.icon}</div>
-                <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 700, color: C.text, margin: "0 0 8px" }}>{c.title}</h3>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 16, fontWeight: 700, color: C.text, margin: "0 0 8px" }}>{c.title}</h3>
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, lineHeight: 1.65, color: C.textMuted, margin: 0 }}>{c.text}</p>
               </div>
             ))}

@@ -11,6 +11,7 @@ import groupImage2 from "@/public/ramadan/group2.png";
 import groupImage3 from "@/public/ramadan/group3.png";
 import tuitionImage from "@/public/pictures/pictures5.png";
 import ContactSection from "./ContactSection";
+import { C } from "./constants";
 
 const subjectCards = [
   {
@@ -98,7 +99,7 @@ export default function RamadanPageDesign() {
               <span className="ramadan-page-hero-overlay" />
 
               <div className="ramadan-page-hero-content">
-                <h1 style={{fontFamily: "'DM Sans', sans-serif"}}>
+                <h1>
                   Saturday &amp; Sunday 
                   <span className="border-right"></span>
                    <span>11:00 AM - 3:00 PM</span>
@@ -167,7 +168,7 @@ export default function RamadanPageDesign() {
                     <Image src={group.image} alt={group.title} fill sizes="(max-width: 700px) 100vw, 180px" />
                   </div>
                   <div>
-                    <h3 style={{color:"#5F9B90"}}>{group.title}</h3>
+                    <h3>{group.title}</h3>
                     <ul>
                       {group.points.map((point) => (
                         <li key={point}>{point}</li>
@@ -245,7 +246,9 @@ export default function RamadanPageDesign() {
         .ramadan-subjects-section h2,
         .ramadan-groups-section h2,
         .ramadan-visit-card h2,
-        .ramadan-tuition-copy h2 {
+        .ramadan-tuition-copy h2,
+        .ramadan-subject-card h3,
+        .ramadan-group-item h3 {
           font-family: "Playfair Display", serif;
         }
 
@@ -378,7 +381,7 @@ export default function RamadanPageDesign() {
         .ramadan-page-content h2 {
           margin: 0;
           max-width: 360px;
-          color: #202729;
+          color: ${C.text};
           font-size: 36px;
           font-weight: 600;
           line-height: 1.08;
@@ -387,7 +390,7 @@ export default function RamadanPageDesign() {
 
         .ramadan-page-copy {
           max-width: 590px;
-          color: #293437;
+          color: ${C.textMuted};
           font-size: 14px;
           font-weight: 500;
           line-height: 1.68;
@@ -471,7 +474,7 @@ export default function RamadanPageDesign() {
         .ramadan-subjects-shell h2,
         .ramadan-groups-shell h2 {
           margin: 0 0 36px;
-          color: #202729;
+          color: ${C.text};
           font-size: 36px;
           font-weight: 600;
           line-height: 1;
@@ -512,7 +515,7 @@ export default function RamadanPageDesign() {
         .ramadan-subject-card h3,
         .ramadan-group-item h3 {
           margin: 0 0 12px;
-          color: #202729;
+          color: ${C.text};
           font-size: 14px;
           font-weight: 700;
           line-height: 1.25;
@@ -522,7 +525,7 @@ export default function RamadanPageDesign() {
         .ramadan-group-item ul {
           margin: 0;
           padding-left: 16px;
-          color: #3f4a4d;
+          color: ${C.textMuted};
           font-size: 11px;
           font-weight: 500;
           line-height: 1.72;
@@ -578,7 +581,7 @@ export default function RamadanPageDesign() {
         }
 
         .ramadan-group-item h3 {
-          color: #2f7f7d;
+          color: ${C.teal};
           font-size: 18px;
         }
 
@@ -624,7 +627,7 @@ export default function RamadanPageDesign() {
 
         .ramadan-visit-card h2 {
           margin: 0 0 24px;
-          color: #202729;
+          color: ${C.text};
           font-size: 26px;
           font-weight: 600;
           line-height: 1;
@@ -632,7 +635,7 @@ export default function RamadanPageDesign() {
 
         .ramadan-visit-card p {
         margin-top:100px;
-          color: #293437;
+          color: ${C.textMuted};
           font-size: 13px;
           font-weight: 500;
           line-height: 1.65;
@@ -668,7 +671,7 @@ export default function RamadanPageDesign() {
 
         .ramadan-tuition-copy h2 {
           margin: 0 0 18px;
-          color: #202729;
+          color: ${C.text};
           font-size: 30px;
           font-weight: 600;
           line-height: 1.1;
@@ -679,32 +682,32 @@ export default function RamadanPageDesign() {
           align-items: baseline;
           gap: 4px;
           margin-bottom: 28px;
-          color: #202729;
+          color: ${C.text};
         }
 
         .ramadan-price strong {
-          color: #2f7f7d;
+          color: ${C.teal};
           font-size: 34px;
           font-weight: 700;
           line-height: 1;
         }
 
         .ramadan-price span {
-          color: #2f7f7d;
+          color: ${C.teal};
           font-size: 13px;
           font-weight: 500;
         }
 
         .ramadan-price small {
           margin-left: 5px;
-          color: #202729;
+          color: ${C.text};
           font-size: 13px;
           font-weight: 600;
         }
 
         .ramadan-tuition-copy p {
           margin: 0 0 10px;
-          color: #202729;
+          color: ${C.text};
           font-size: 14px;
           font-weight: 700;
         }
@@ -712,7 +715,7 @@ export default function RamadanPageDesign() {
         .ramadan-tuition-copy ul {
           margin: 0;
           padding-left: 16px;
-          color: #3f4a4d;
+          color: ${C.textMuted};
           font-size: 14px;
           font-weight: 500;
           line-height: 1.72;

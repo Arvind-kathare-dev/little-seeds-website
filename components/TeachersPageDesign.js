@@ -164,7 +164,8 @@ export default function TeachersPageDesign() {
       <style>{`
         .teachers-page-section h1,
         .choosing-teachers-section h2,
-        .teachers-training-section h2 {
+        .teachers-training-section h2,
+        .choosing-teachers-card h3 {
           font-family: "Playfair Display", serif;
         }
 
@@ -219,7 +220,7 @@ export default function TeachersPageDesign() {
 
         .teachers-page-copy {
           max-width: 560px;
-          color: #293437;
+          color: ${C.textMuted};
           font-size: 13px;
           font-weight: 500;
           line-height: 1.68;
@@ -295,7 +296,7 @@ export default function TeachersPageDesign() {
 
         .choosing-teachers-intro h2 {
           margin: 0 0 20px;
-          color: #202729;
+          color: ${C.text};
           font-size: 36px;
           font-weight: 600;
           line-height: 1;
@@ -304,7 +305,7 @@ export default function TeachersPageDesign() {
 
         .choosing-teachers-intro h3 {
           margin: 24px 0 8px;
-          color: #202729;
+          color: ${C.text};
           font-size: 15px;
           font-weight: 700;
           line-height: 1.2;
@@ -313,7 +314,7 @@ export default function TeachersPageDesign() {
         .choosing-teachers-intro p {
           margin: 0;
           max-width: 420px;
-          color: #3a4547;
+          color: ${C.textMuted};
           font-size: 13px;
           font-weight: 500;
           line-height: 1.65;
@@ -350,7 +351,7 @@ export default function TeachersPageDesign() {
 
         .choosing-teachers-card h3 {
           margin: 0 0 8px;
-          color: #202729;
+          color: ${C.text};
           font-size: 14px;
           font-weight: 700;
           line-height: 1.25;
@@ -358,7 +359,7 @@ export default function TeachersPageDesign() {
 
         .choosing-teachers-card p {
           margin: 0;
-          color: #4a5557;
+          color: ${C.textMuted};
           font-size: 12px;
           font-weight: 500;
           line-height: 1.55;
@@ -398,7 +399,7 @@ export default function TeachersPageDesign() {
 
         .teachers-training-copy h2 {
           margin: 0 0 26px;
-          color: #202729;
+          color: ${C.text};
           font-size: 36px;
           font-weight: 600;
           line-height: 1;
@@ -407,7 +408,7 @@ export default function TeachersPageDesign() {
 
         .teachers-training-copy p {
           margin: 0 0 18px;
-          color: #3a4547;
+          color: ${C.textMuted};
           font-size: 13px;
           font-weight: 500;
           line-height: 1.66;

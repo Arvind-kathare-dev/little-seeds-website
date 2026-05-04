@@ -159,7 +159,8 @@ export default function OurGoal() {
 
       <style>{`
         .our-goal-section h1,
-        .school-booklet-section h2{
+        .school-booklet-section h2,
+        .school-booklet-card h3 {
           font-family: "Playfair Display", serif;
         }
 
@@ -191,7 +192,7 @@ export default function OurGoal() {
         .our-goal-intro {
         max-width: 300px;
           margin: 28px auto 112px;
-          color: #101820;
+          color: ${C.textMuted};
           font-size: 13px;
           font-weight: 500;
           line-height: 1.35;
@@ -225,7 +226,7 @@ export default function OurGoal() {
         .our-goal-card p {
           max-width: 220px;
           margin: 0 auto;
-          color: #202729;
+          color: ${C.textMuted};
           font-size: 12px;
           font-weight: 500;
           line-height: 1.35;
@@ -277,7 +278,7 @@ export default function OurGoal() {
 
         .school-booklet-shell h2 {
           margin: 0 0 6px;
-          color: #1f2527;
+          color: ${C.text};
           font-size: clamp(25px, 3vw, 33px);
           font-weight: 600;
           line-height: 1.05;
@@ -287,7 +288,7 @@ export default function OurGoal() {
 
         .school-booklet-intro {
           margin: 0 0 36px;
-          color: #11191c;
+          color: ${C.textMuted};
           font-size: 13px;
           font-weight: 500;
           line-height: 1.45;
@@ -365,7 +366,7 @@ export default function OurGoal() {
 
         .school-booklet-card h3 {
           margin: 0;
-          color: #11191c;
+          color: ${C.text};
           font-size: 15px;
           font-weight: 600;
           line-height: 1.1;
@@ -375,7 +376,7 @@ export default function OurGoal() {
         .school-booklet-card p {
           max-width: 220px;
           margin: 4px 0 0;
-          color: #30393c;
+          color: ${C.textMuted};
           font-size: 12px;
           font-weight: 500;
           line-height: 1.45;

@@ -178,14 +178,14 @@ export default function AboutPageDesign() {
 
         .about-page-content h1 {
           margin: 0;
-          color: #171d1f;
+          color: ${C.text};
           font-size: 36px;
           font-weight: 700;
           line-height: 1.08;
         }
 
         .about-page-copy {
-          color: #263133;
+          color: ${C.textMuted};
           font-size: 14px;
           font-weight: 500;
           line-height: 1.7;
@@ -322,7 +322,7 @@ export default function AboutPageDesign() {
 
         .teachers-copy h2 {
           margin: 0 0 28px;
-          color: #171d1f;
+          color: ${C.text};
           font-size: clamp(30px, 3vw, 42px);
           font-weight: 600;
           line-height: 1.08;
@@ -331,7 +331,7 @@ export default function AboutPageDesign() {
 
         .teachers-copy p {
           margin: 0 0 18px;
-          color: #3b4648;
+          color: ${C.textMuted};
           font-size: 14px;
           font-weight: 500;
           line-height: 1.68;

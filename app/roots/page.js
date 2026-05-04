@@ -71,7 +71,7 @@ export default function RootsPage() {
             {SUB_PROGRAMS.map((c, i) => (
               <div key={i} style={{ background: c.bg, borderRadius: 18, padding: "28px 24px", border: `1px solid ${c.color}15` }}>
                 <div style={{ marginBottom: 12 }}>{c.icon}</div>
-                <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 17, fontWeight: 700, color: C.text, margin: "0 0 10px" }}>{c.title}</h3>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 17, fontWeight: 700, color: C.text, margin: "0 0 10px" }}>{c.title}</h3>
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, lineHeight: 1.7, color: C.textMuted, margin: 0 }}>{c.text}</p>
               </div>
             ))}
