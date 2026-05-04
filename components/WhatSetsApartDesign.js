@@ -72,6 +72,11 @@ export default function WhatSetsApartDesign() {
           padding: 96px 24px 74px;
         }
 
+        .sets-apart-copy,
+        .sets-apart-tags span {
+          font-family: "DM Sans", sans-serif;
+        }
+
         .sets-apart-shell {
           width: 100%;
           max-width: 1100px;
@@ -128,7 +133,7 @@ export default function WhatSetsApartDesign() {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 24px 48px 18px;
+          padding: 24px 32px 18px;
           border: 1px solid #d7d7d7;
           border-radius: 18px;
           background: rgba(255, 255, 255, 0.96);
@@ -145,6 +150,8 @@ export default function WhatSetsApartDesign() {
         .sets-apart-card p {
           grid-area: 1 / 1;
           margin: 0;
+          color: "#797979";
+          font-weight: 500;
           text-align: center;
           opacity: 0;
           transform: translateY(8px);

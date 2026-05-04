@@ -38,7 +38,7 @@ export default function AboutPageDesign() {
 
           <div className="about-page-content">
             <FadeIn delay={0.08}>
-              <h1 className="ls-title">Who We Are</h1>
+              <h2 style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">Who We Are</h2>
             </FadeIn>
 
             <FadeIn delay={0.16}>
@@ -82,7 +82,7 @@ export default function AboutPageDesign() {
 
           <FadeIn delay={0.12}>
             <div className="teachers-copy">
-              <h2 className="ls-title">Teachers</h2>
+              <h2 style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">Teachers</h2>
               {teacherText.map((text) => (
                 <p key={text} className="ls-body">{text}</p>
               ))}
@@ -95,7 +95,7 @@ export default function AboutPageDesign() {
         <div className="teachers-shell teachers-shell-image-right">
           <FadeIn>
             <div className="teachers-copy">
-              <h2 className="ls-title">Teachers</h2>
+              <h2 style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">Teachers</h2>
               {teacherText.map((text) => (
                 <p key={text} className="ls-body">{text}</p>
               ))}
@@ -128,6 +128,17 @@ export default function AboutPageDesign() {
           justify-content: center;
           background: #f3faf7;
           padding: 98px 24px 90px;
+        }
+
+        .about-page-copy,
+        .about-page-tags span,
+        .about-page-subject-card ul,
+        .about-page-group-item ul,
+        .about-page-visit-card p,
+        .about-page-price,
+        .about-page-tuition-copy p,
+        .about-page-tuition-copy ul {
+          font-family: "DM Sans", sans-serif;
         }
 
         .about-page-shell {
@@ -165,11 +176,15 @@ export default function AboutPageDesign() {
           align-items: start;
         }
 
-        .about-page-content h1 {
+        .about-page-content h2 {
+          color:"#2D3436"
           margin: 0;
         }
 
         .about-page-copy p {
+          color: "#797979";
+          font-size: 14.5px;
+          font-weight: 500; 
           margin: 0 0 16px;
         }
 
@@ -288,6 +303,7 @@ export default function AboutPageDesign() {
 
         .teachers-copy {
           max-width: 560px;
+          color:"#2D3436"
           text-align: left;
         }
 
@@ -296,7 +312,10 @@ export default function AboutPageDesign() {
         }
 
         .teachers-copy p.ls-body {
+          color: "#797979";
           margin: 0 0 18px;
+          font-weight: 500;
+          font-size: 14.5px;
         }
 
         .teachers-copy p.ls-body:last-child {

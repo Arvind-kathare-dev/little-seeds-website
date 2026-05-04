@@ -23,7 +23,7 @@ export default function BrightRootsDesign() {
 
         <div className="bright-roots-content">
           <div className="bright-roots-heading">
-            <h1 className="ls-title">Nurturing Bright Minds Growing Strong Roots</h1>
+            <h2 className="ls-title">Nurturing Bright Minds Growing Strong Roots</h2>
             <p className="ls-lead bright-roots-tagline">A Loving, Academic-and-Values-Driven Early Childhood Experience in Sacramento.</p>
           </div>
 
@@ -43,6 +43,12 @@ export default function BrightRootsDesign() {
           align-items: center;
           justify-content: center;
           padding: 80px 24px 72px;
+        }
+
+        .bright-roots-copy,
+        .bright-roots-tags span {
+          color: #797979;
+          font-family: "DM Sans", sans-serif;
         }
 
         .bright-roots-shell {
@@ -72,7 +78,7 @@ export default function BrightRootsDesign() {
           align-items: start;
         }
 
-        .bright-roots-heading h1 {
+        .bright-roots-heading h2 {
           margin: 0 0 18px;
           max-width: 420px;
         }
@@ -80,14 +86,18 @@ export default function BrightRootsDesign() {
         .bright-roots-tagline {
           margin: 0;
           max-width: 360px;
-          font-weight: 500;
+          font-size: 14px;
+          color: "#2C2C2C";
+          font-weight: 700;
         }
 
         .bright-roots-copy {
+          color: "#797979";
           padding-top: 2px;
         }
 
         .bright-roots-copy p {
+          font-size: 14.5px;
           margin: 0 0 17px;
         }
 
@@ -111,7 +121,7 @@ export default function BrightRootsDesign() {
             gap: 26px;
           }
 
-          .bright-roots-heading h1,
+          .bright-roots-heading h2,
           .bright-roots-tagline {
             max-width: none;
           }

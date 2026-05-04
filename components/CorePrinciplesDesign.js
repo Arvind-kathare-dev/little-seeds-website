@@ -65,6 +65,11 @@ export default function CorePrinciplesDesign() {
           padding: 88px 24px 80px;
         }
 
+        .core-principles-copy,
+        .core-principles-tags span {
+          font-family: "DM Sans", sans-serif;
+        }
+
         .core-principles-shell {
           width: 100%;
           max-width: 1100px;
@@ -108,7 +113,6 @@ export default function CorePrinciplesDesign() {
           width: 56px;
           height: 56px;
           border-radius: 14px;
-          background: ${C.tealLight};
           display: flex;
           align-items: center;
           justify-content: center;
@@ -125,6 +129,8 @@ export default function CorePrinciplesDesign() {
           max-width: 168px;
           margin: 0;
           font-weight: 500;
+          color: "#797979";
+          font-size: 14.5px;
           line-height: 1.5;
           text-align: center;
         }

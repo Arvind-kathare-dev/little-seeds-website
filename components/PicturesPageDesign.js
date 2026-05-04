@@ -55,7 +55,7 @@ export default function PicturesPageDesign() {
     <section className="pictures-page-section">
       <div className="pictures-page-shell">
         <FadeIn>
-          <h1 className="ls-title">Pictures</h1>
+          <h1 style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">Pictures</h1>
         </FadeIn>
 
         <div className="pictures-grid">

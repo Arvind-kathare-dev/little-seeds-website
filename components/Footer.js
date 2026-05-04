@@ -43,9 +43,31 @@ export default function Footer() {
   return (
     <footer style={{ padding: "56px 24px 32px", background: C.tealDark }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 40, marginBottom: 40 }}>
-        {/* Brand */}
         <div>
-          <Image src="/logo.jpg" alt="Little Seeds" width={180} height={90} style={{ height: 90, width: "auto", marginBottom: 14, objectFit: "contain" }} />
+        <div
+  style={{
+    width: 100,        
+    height: 100,
+    backgroundColor: "#ffffff",
+    borderRadius: "50%",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom:"10px"
+  }}
+>
+  <Image
+    src="/logo-transparent.png"
+    alt="Little Seeds"
+    width={80}            
+    height={80}
+    style={{
+      objectFit: "contain",
+    }}
+  />
+</div>
+
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "rgba(255,255,255,.5)", lineHeight: 1.7, margin: 0 }}>
             Faith-centered learning programs for children ages toddler through 6th grade.
           </p>

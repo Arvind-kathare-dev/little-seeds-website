@@ -25,7 +25,7 @@ export default function GrowingLearnersDesign() {
           </div>
         </div>
 
-        <div className="growing-learners-copy">
+        <div style={{ color: "#2C2C2C",fontSize:"14.5px",fontFamily:"DM Sans",fontWeight:"500" }} className="growing-learners-copy">
           {copyBlocks.map((text) => (
             <p key={text} className="ls-prose">{text}</p>
           ))}
@@ -40,6 +40,11 @@ export default function GrowingLearnersDesign() {
           align-items: center;
           justify-content: center;
           padding: 90px 24px 60px;
+        }
+
+        .growing-learners-copy,
+        .growing-learners-tags span {
+          font-family: "DM Sans", sans-serif;
         }
 
         .growing-learners-wrap {
@@ -84,7 +89,7 @@ export default function GrowingLearnersDesign() {
 
         .growing-learners-card-content h2 {
           margin: 0;
-          max-width: 380px;
+          max-width: 500px;
         }
 
         .growing-learners-card-content a {
@@ -110,7 +115,10 @@ export default function GrowingLearnersDesign() {
         }
 
         .growing-learners-copy p {
+          color: "#797979";
+          font-weight: 500;
           margin: 0 0 34px;
+          font-size: 14.5px;
           line-height: 1.65;
         }
 

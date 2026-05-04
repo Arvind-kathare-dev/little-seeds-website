@@ -57,10 +57,9 @@ export default function TeachersPageDesign() {
           background: `linear-gradient(168deg, ${C.cream} 0%, ${C.tealLight} 50%, ${C.coralPale} 100%)`,
           position: "relative",
           overflow: "hidden",
-          padding: "120px 24px 80px",
+          padding: "120px 0px 80px", 
         }}
       >
-      <section className="teachers-page-section">
         <div className="teachers-page-shell">
           <FadeIn>
             <div className="teachers-page-hero">
@@ -78,7 +77,7 @@ export default function TeachersPageDesign() {
 
           <div className="teachers-page-content">
             <FadeIn delay={0.08}>
-              <h1 className="ls-title">Our Team</h1>
+              <h2 style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">Our Team</h2>  
             </FadeIn>
 
             <FadeIn delay={0.16}>
@@ -100,17 +99,16 @@ export default function TeachersPageDesign() {
           </div>
         </div>
       </section>
-      </section>
 
       <section className="choosing-teachers-section">
         <div className="choosing-teachers-shell">
           <FadeIn>
             <div className="choosing-teachers-intro">
-              <h2 className="ls-title">Choosing Our Teachers</h2>
-              <p className="ls-lead" style={{ maxWidth: 420 }}>
+              <h2 style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">Choosing Our Teachers</h2>
+              <p className="ls-lead" style={{ maxWidth: 420, color: "#2C2C2C",fontWeight:"600" }}>
                 At Little Seeds, we carefully select teachers who are more than educators; they are mentors, guides, and role models who inspire children every day. Our team embodies the following qualities:
               </p>
-              <h3 className="ls-card-title" style={{ fontSize: "clamp(16px, 1.8vw, 20px)" }}>Role Models of Faith and Character:</h3>
+              <p style={{ color: "#2C2C2C",fontWeight:"500",paddingTop:"12px",paddingBottom:"12px",fontSize:"14.5px" }}>Role Models of Faith and Character:</p>
               <p className="ls-prose">
               Beyond academics, our teachers embody Islamic values in their actions and interactions, inspiring children to live with integrity, kindness, and respect.
               </p>
@@ -125,7 +123,7 @@ export default function TeachersPageDesign() {
                     <Image src={card.icon} alt="" width={24} height={24} />
                   </span>
                   <div>
-                    <h3 className="ls-card-title" style={{ fontSize: "clamp(15px, 1.6vw, 19px)" }}>{card.title}</h3>
+                    <p style={{ color: "#2C2C2C",fontWeight:"700",fontSize:"16px",paddingBottom:"12px" }}>{card.title}</p>
                     <p className="ls-prose">{card.text}</p>
                   </div>
                 </article>
@@ -150,7 +148,7 @@ export default function TeachersPageDesign() {
 
           <FadeIn delay={0.12}>
             <div className="teachers-training-copy">
-              <h2 className="ls-title">Teachers</h2>
+              <h2 style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">Teachers</h2>
               {teachersText.map((text) => (
                 <p key={text} className="ls-body">{text}</p>
               ))}
@@ -162,10 +160,6 @@ export default function TeachersPageDesign() {
       <GoalContactBanner/>
 
       <style>{`
-        .teachers-page-section {
-          padding: 98px 24px 90px;
-        }
-
         .teachers-page-shell {
           width: 100%;
           max-width: 1100px;
@@ -211,6 +205,10 @@ export default function TeachersPageDesign() {
         }
 
         .teachers-page-copy p.ls-body {
+          color: "#2C2C2C";
+          font-family: "DM Sans", sans-serif;
+          font-weight: 500;
+          font-size: 14.5px;
           margin: 0 0 18px;
         }
 
@@ -219,10 +217,6 @@ export default function TeachersPageDesign() {
         }
 
         @media (max-width: 900px) {
-          .teachers-page-section {
-            padding: 92px 22px 72px;
-          }
-
           .teachers-page-hero {
             height: 230px;
           }
@@ -239,10 +233,6 @@ export default function TeachersPageDesign() {
         }
 
         @media (max-width: 620px) {
-          .teachers-page-section {
-            padding: 82px 14px 50px;
-          }
-
           .teachers-page-hero {
             height: 190px;
             border-radius: 4px;
@@ -264,11 +254,14 @@ export default function TeachersPageDesign() {
           margin: 0 auto;
           display: grid;
           grid-template-columns: 0.9fr 1.25fr;
-          gap: 86px;
+          gap: 52px;
           align-items: start;
         }
 
         .choosing-teachers-intro h2 {
+          font-size: 36px;
+          font-family: "Playfair Display", sans-serif;
+          font-weight: 700;
           margin: 0 0 32px;
         }
 
@@ -278,6 +271,9 @@ export default function TeachersPageDesign() {
 
         .choosing-teachers-intro p {
           margin: 0;
+          font-family: "DM Sans", sans-serif;
+          font-weight: 500;
+          font-size: 14.5px;
           max-width: 420px;
         }
 
@@ -314,11 +310,17 @@ export default function TeachersPageDesign() {
         }
 
         .choosing-teachers-card h3 {
+          font-family: "DM Sans", sans-serif;
+          font-weight: 700;
           margin: 0 0 8px;
         }
 
         .choosing-teachers-card p {
           margin: 0;
+          font-family: "DM Sans", sans-serif;
+          font-weight: 500;
+          color: "#0000008A";
+          font-size: 14.5px;
         }
 
         .teachers-training-section {
@@ -357,10 +359,17 @@ export default function TeachersPageDesign() {
         }
 
         .teachers-training-copy h2 {
+          font-size: 36px;
+          font-family: "Playfair Display", sans-serif;
+          font-weight: 700;
           margin: 0 0 28px;
         }
 
         .teachers-training-copy p.ls-body {
+          color: "#777777";
+          font-family: "DM Sans", sans-serif;
+          font-weight: 500;
+          font-size: 14.5px;
           margin: 0 0 18px;
         }
 
