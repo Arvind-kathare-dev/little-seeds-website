@@ -184,7 +184,7 @@ export default function AboutPageDesign() {
         .about-page-copy p {
           color: "#797979";
           font-size: 14.5px;
-          font-weight: 500; 
+          // font-weight: 500; 
           margin: 0 0 16px;
         }
 
@@ -314,7 +314,7 @@ export default function AboutPageDesign() {
         .teachers-copy p.ls-body {
           color: "#797979";
           margin: 0 0 18px;
-          font-weight: 500;
+          // font-weight: 500;
           font-size: 14.5px;
         }
 

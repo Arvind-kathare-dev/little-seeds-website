@@ -128,7 +128,7 @@ export default function CorePrinciplesDesign() {
         .core-principle-text {
           max-width: 168px;
           margin: 0;
-          font-weight: 500;
+          // font-weight: 500;
           color: "#797979";
           font-size: 14.5px;
           line-height: 1.5;

@@ -103,7 +103,7 @@ export default function OurGoal() {
           </FadeIn>
 
           <FadeIn delay={0.12}>
-            <p style={{ color: "#2C2C2C" }} className="our-goal-intro ls-lead">
+            <p className="our-goal-intro ls-lead">
               We provide a faith-centered, inclusive learning environment rooted in Islamic values and modern education.
             </p>
           </FadeIn>
@@ -125,7 +125,7 @@ export default function OurGoal() {
         <div className="school-booklet-shell">
           <FadeIn>
             <h2 id="school-booklet-title" style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">School Booklet Overview</h2>
-            <p style={{ color: "#2C2C2C" }} className="school-booklet-intro ls-lead">
+            <p className="school-booklet-intro ls-lead">
               The Little Seeds School Booklet provides parents with everything they need to know about our programs and philosophy.
             </p>
           </FadeIn>
@@ -146,7 +146,7 @@ export default function OurGoal() {
                   </div>
                   <div className="school-booklet-copy">
                     <h3 style={{ color: "#2C2C2C",fontSize:"14.5px",fontFamily:"DM Sans",fontWeight:"700" }} className="ls-card-title">{card.title}</h3>
-                    <p style={{ color: "#2C2C2C",fontSize:"12.5px",fontFamily:"DM Sans",fontWeight:"500" }} className="ls-prose">{card.description}</p>
+                    <p style={{ fontSize:"12.5px",fontFamily:"DM Sans" }} className="ls-prose">{card.description}</p>
                   </div>
                 </article>
               </FadeIn>
@@ -211,7 +211,7 @@ export default function OurGoal() {
           max-width: 250px;
           margin: 0 auto;
           font-family: "DM Sans", sans-serif;
-          font-weight: 500;
+          // font-weight: 500;
           color: "#3D3D3D";
           font-size: 14.5px;
         }
@@ -348,7 +348,7 @@ export default function OurGoal() {
           font-size: 13px;
           color: "#888888";
           font-family: "DM Sans", sans-serif;
-          font-weight: 500;
+          // font-weight: 500;
           line-height: 1.45;
           opacity: 0;
           max-height: 0;

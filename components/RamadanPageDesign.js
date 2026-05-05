@@ -119,7 +119,7 @@ export default function RamadanPageDesign() {
 
             <FadeIn delay={0.16}>
               <div className="ramadan-page-copy">
-                <p style={{ color: "#2C2C2C",fontSize:"14.5px",fontFamily:"DM Sans",fontWeight:"500" }} className="ls-lead">
+                <p style={{ fontSize:"14.5px",fontFamily:"DM Sans" }} className="ls-lead">
                   The Little Seeds Ramadan Program is a carefully designed weekend program that nurtures children’s faith, learning, and character during the blessed month of Ramadan. Through structured learning, reflection, and community engagement, children build a meaningful connection to the Quran and Islamic values in a warm and supportive environment.
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function RamadanPageDesign() {
                     <Image src={subject.image} alt={subject.title} fill sizes="(max-width: 700px) 100vw, 300px" />
                   </div>
                   <p style={{ color: "#2C2C2C",fontSize:"16px",fontFamily:"DM Sans",fontWeight:"700" ,paddingBottom:"12px"}} className="ls-card-title">{subject.title}</p>
-                  <ul style={{ color: "#606060",fontSize:"14.5px",fontFamily:"DM Sans",fontWeight:"500" }}>
+                  <ul style={{ fontSize:"14.5px",fontFamily:"DM Sans" }}>
                     {subject.points.map((point) => (
                       <li key={point}>{point}</li>
                     ))}
@@ -169,7 +169,7 @@ export default function RamadanPageDesign() {
                   </div>
                   <div>
                     <p style={{ color: "#5F9B90",fontSize:"18px",fontFamily:"DM Sans",fontWeight:"700" ,paddingBottom:"12px"}} className="ls-card-title">{group.title}</p>
-                    <ul style={{ color: "#606060",fontSize:"14.5px",fontFamily:"DM Sans",fontWeight:"500" }}>
+                    <ul style={{ fontSize:"14.5px",fontFamily:"DM Sans" }}>
                       {group.points.map((point) => (
                         <li key={point}>{point}</li>
                       ))}
@@ -195,7 +195,7 @@ export default function RamadanPageDesign() {
 
           <aside className="ramadan-visit-card">
             <h2 style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">Visit Us</h2>
-            <p style={{ color: "#2C2C2C",fontSize:"14.5px",fontFamily:"DM Sans",fontWeight:"500" }} className="ls-prose">
+            <p style={{ fontSize:"14.5px",fontFamily:"DM Sans" }} className="ls-prose">
               1420 River Park Dr, Suite 100,
               <br />
               Sacramento, CA 95815, USA
@@ -654,7 +654,7 @@ export default function RamadanPageDesign() {
         .ramadan-tuition-copy ul {
           margin: 0;
           font-size: 14.5px;
-          font-weight: 500;
+          // font-weight: 500;
           font-family: "DM Sans", sans-serif; 
           padding-left: 16px;
           line-height: 1.72;

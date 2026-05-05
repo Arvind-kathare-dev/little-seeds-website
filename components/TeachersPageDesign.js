@@ -105,7 +105,7 @@ export default function TeachersPageDesign() {
           <FadeIn>
             <div className="choosing-teachers-intro">
               <h2 style={{ color: "#2C2C2C",fontSize:"36px",fontFamily:"Playfair Display",fontWeight:"700" }} className="ls-title">Choosing Our Teachers</h2>
-              <p className="ls-lead" style={{ maxWidth: 420, color: "#2C2C2C",fontWeight:"600" }}>
+              <p className="ls-lead" style={{ maxWidth: 420 }}>
                 At Little Seeds, we carefully select teachers who are more than educators; they are mentors, guides, and role models who inspire children every day. Our team embodies the following qualities:
               </p>
               <p style={{ color: "#2C2C2C",fontWeight:"500",paddingTop:"12px",paddingBottom:"12px",fontSize:"14.5px" }}>Role Models of Faith and Character:</p>
@@ -207,7 +207,7 @@ export default function TeachersPageDesign() {
         .teachers-page-copy p.ls-body {
           color: "#2C2C2C";
           font-family: "DM Sans", sans-serif;
-          font-weight: 500;
+          // font-weight: 500;
           font-size: 14.5px;
           margin: 0 0 18px;
         }
@@ -272,7 +272,7 @@ export default function TeachersPageDesign() {
         .choosing-teachers-intro p {
           margin: 0;
           font-family: "DM Sans", sans-serif;
-          font-weight: 500;
+          // font-weight: 500;
           font-size: 14.5px;
           max-width: 420px;
         }
@@ -318,7 +318,7 @@ export default function TeachersPageDesign() {
         .choosing-teachers-card p {
           margin: 0;
           font-family: "DM Sans", sans-serif;
-          font-weight: 500;
+          // font-weight: 500;
           color: "#0000008A";
           font-size: 14.5px;
         }
@@ -368,7 +368,7 @@ export default function TeachersPageDesign() {
         .teachers-training-copy p.ls-body {
           color: "#777777";
           font-family: "DM Sans", sans-serif;
-          font-weight: 500;
+          // font-weight: 500;
           font-size: 14.5px;
           margin: 0 0 18px;
         }

@@ -116,7 +116,7 @@ export default function GrowingLearnersDesign() {
 
         .growing-learners-copy p {
           color: "#797979";
-          font-weight: 500;
+          // font-weight: 500;
           margin: 0 0 34px;
           font-size: 14.5px;
           line-height: 1.65;
