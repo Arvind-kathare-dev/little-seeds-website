@@ -25,7 +25,7 @@ export default function GrowingLearnersDesign() {
           </div>
         </div>
 
-        <div style={{ color: "#2C2C2C",fontSize:"14.5px",fontFamily:"DM Sans",fontWeight:"500" }} className="growing-learners-copy">
+        <div style={{ fontSize:"14.5px",fontFamily:"DM Sans" }} className="growing-learners-copy">
           {copyBlocks.map((text) => (
             <p key={text} className="ls-prose">{text}</p>
           ))}
