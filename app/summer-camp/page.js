@@ -59,16 +59,11 @@ export default function SummerCampPage() {
             {/* Session 1 */}
             <FadeIn delay={0.1}>
               <div className="ls-session-card" style={{ background: C.goldLight, borderRadius: 24, padding: 40, height: "100%", border: `1px solid ${C.gold}15` }}>
-                <div className="ls-session-head" style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: 12, background: C.white, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <BookSmallIcon size={24} color={C.gold} />
-                  </div>
-                  <div>
-                    <h3 className="ls-card-title" style={{ margin: 0, fontSize: 18 }}>Session 1 — Weeks 1–4</h3>
-                    <p style={{ margin: 0, fontSize: 14, color: C.goldDark, fontWeight: 600 }}>June 22 – July 17</p>
-                  </div>
+                <div style={{ display: "inline-block", padding: "6px 16px", borderRadius: 20, background: C.gold + "15", color: C.goldDark, fontWeight: 700, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 16 }}>
+                  Session 1 — Weeks 1–4
                 </div>
-                <h4 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 24, fontWeight: 700, marginBottom: 12 }}>My First Comic Book Project</h4>
+                <h3 className="ls-card-title" style={{ fontSize: 26, marginBottom: 8 }}>My First Comic Book Project</h3>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 700, color: C.goldDark, marginBottom: 16 }}>June 22 – July 17</p>
                 <p className="ls-prose" style={{ marginBottom: 24 }}>Children will explore storytelling through reading, imagination, art, and creativity while designing and creating their own personal comic book.</p>
 
                 <h5 style={{ fontSize: 14, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: C.goldDark, marginBottom: 12 }}>What Children Will Learn:</h5>
@@ -85,16 +80,11 @@ export default function SummerCampPage() {
             {/* Session 2 */}
             <FadeIn delay={0.2}>
               <div className="ls-session-card" style={{ background: C.tealLight, borderRadius: 24, padding: 40, height: "100%", border: `1px solid ${C.teal}15` }}>
-                <div className="ls-session-head" style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: 12, background: C.white, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <RocketIcon size={24} color={C.teal} />
-                  </div>
-                  <div>
-                    <h3 className="ls-card-title" style={{ margin: 0, fontSize: 18 }}>Session 2 — Weeks 5–8</h3>
-                    <p style={{ margin: 0, fontSize: 14, color: C.tealDark, fontWeight: 600 }}>July 20 – August 14</p>
-                  </div>
+                <div style={{ display: "inline-block", padding: "6px 16px", borderRadius: 20, background: C.teal + "15", color: C.tealDark, fontWeight: 700, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 16 }}>
+                  Session 2 — Weeks 5–8
                 </div>
-                <h4 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 24, fontWeight: 700, marginBottom: 12 }}>Young Entrepreneurs Project</h4>
+                <h3 className="ls-card-title" style={{ fontSize: 26, marginBottom: 8 }}>Young Entrepreneurs Project</h3>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 700, color: C.tealDark, marginBottom: 16 }}>July 20 – August 14</p>
                 <p className="ls-prose" style={{ marginBottom: 24 }}>Children will learn how to turn ideas into real projects while exploring leadership, teamwork, creativity, and basic business concepts.</p>
 
                 <h5 style={{ fontSize: 14, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: C.tealDark, marginBottom: 12 }}>What Children Will Learn:</h5>

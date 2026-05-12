@@ -26,7 +26,7 @@ export default function QuranTreasuresPage() {
               Summer Qur’an Treasures Competition
             </h1>
             <h2 className="ls-title" style={{ fontSize: "clamp(24px, 4vw, 36px)", color: C.goldDark, marginBottom: 20 }}>
-              اﻟﻘرآن ﻣﻊ رﺣﻠﺔ
+              رﺣﻠﺔ ﻣﻊ اﻟﻘرآن
             </h2>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 18, fontWeight: 700, color: C.goldDark, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 20 }}>
               Reflect • Learn • Compete
@@ -43,7 +43,7 @@ export default function QuranTreasuresPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 60 }}>
             <FadeIn>
-              <h2 className="ls-title">Program Overview</h2>
+              <h2 className="ls-title" style={{ marginBottom: 16 }}>Program Overview</h2>
               <p className="ls-prose" style={{ maxWidth: 700, margin: "0 auto", fontSize: 17 }}>
                 This 8-week weekend program helps children strengthen their relationship with the Qur’an while learning valuable Islamic lessons and developing confidence through a positive and motivating environment.
               </p>

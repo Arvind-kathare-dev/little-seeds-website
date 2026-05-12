@@ -37,7 +37,7 @@ const SUB_PROGRAMS = [
   {
     icon: <BookSmallIcon size={34} color={C.sage} />,
     title: "Arabic Program",
-    text: "Focusing on foundational Arabic reading, writing, and vocabulary to help children connect deeper with the language of the Quran.",
+    text: "Our Arabic Program is designed for beginner and intermediate learners who want to strengthen their Arabic skills in a warm, encouraging, and enjoyable environment.",
     color: C.sage,
     bg: C.sageLight,
     href: "/arabic-program",
@@ -45,7 +45,7 @@ const SUB_PROGRAMS = [
   {
     icon: <StarIcon size={34} color={C.gold} />,
     title: "Qur’an Treasures",
-    text: "An 8-week summer journey through Surah Al-Kahf, Yaseen, and Al-Waqi’ah, concluding with a final competition day.",
+    text: "This 8-week weekend program helps children strengthen their relationship with the Qur’an while learning valuable Islamic lessons and developing confidence through a positive and motivating environment. ",
     color: C.gold,
     bg: C.goldLight,
     href: "/quran-treasures",
