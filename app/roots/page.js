@@ -2,8 +2,9 @@ import BackButton from "@/components/BackButton";
 import AboutSection from "@/components/AboutSection";
 import SectionLabel from "@/components/SectionLabel";
 import { C } from "@/components/constants";
+import Link from "next/link";
 import { RootsIllustration } from "@/components/Illustrations";
-import { MoonIcon, SeedlingIcon, BookSmallIcon } from "@/components/Icons";
+import { MoonIcon, SeedlingIcon, BookSmallIcon, StarIcon } from "@/components/Icons";
 
 export const metadata = {
   title: "Roots Program — Little Seeds",
@@ -17,6 +18,7 @@ const SUB_PROGRAMS = [
     text: "A seasonal program immersing children in the spirit of Ramadan — fasting awareness, Quran recitation, charitable giving, and community iftars.",
     color: C.gold,
     bg: C.goldLight,
+    href: "/ramadan",
   },
   {
     icon: <SeedlingIcon size={34} color={C.teal} />,
@@ -31,6 +33,22 @@ const SUB_PROGRAMS = [
     text: "Weekly weekend sessions combining Islamic studies, Arabic language basics, and community bonding.",
     color: C.teal,
     bg: C.tealPale,
+  },
+  {
+    icon: <BookSmallIcon size={34} color={C.sage} />,
+    title: "Arabic Program",
+    text: "Focusing on foundational Arabic reading, writing, and vocabulary to help children connect deeper with the language of the Quran.",
+    color: C.sage,
+    bg: C.sageLight,
+    href: "/arabic-program",
+  },
+  {
+    icon: <StarIcon size={34} color={C.gold} />,
+    title: "Qur’an Treasures",
+    text: "An 8-week summer journey through Surah Al-Kahf, Yaseen, and Al-Waqi’ah, concluding with a final competition day.",
+    color: C.gold,
+    bg: C.goldLight,
+    href: "/quran-treasures",
   },
 ];
 
@@ -69,10 +87,16 @@ export default function RootsPage() {
           <h2 className="ls-title" style={{ marginBottom: 28 }}>Programs Within Roots</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
             {SUB_PROGRAMS.map((c, i) => (
-              <div key={i} style={{ background: c.bg, borderRadius: 18, padding: "28px 24px", border: `1px solid ${c.color}15` }}>
+              <div key={i} style={{ background: c.bg, borderRadius: 18, padding: "28px 24px", border: `1px solid ${c.color}15`, display: "flex", flexDirection: "column" }}>
                 <div style={{ marginBottom: 12 }}>{c.icon}</div>
                 <h3 className="ls-card-title" style={{ fontSize: 17, margin: "0 0 10px" }}>{c.title}</h3>
-                <p className="ls-prose" style={{ lineHeight: 1.7, margin: 0 }}>{c.text}</p>
+                <p className="ls-prose" style={{ lineHeight: 1.7, margin: "0 0 16px", flex: 1 }}>{c.text}</p>
+                {c.href && (
+                  <Link href={c.href} style={{ color: c.color, fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 700, textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
+                    Learn More
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </Link>
+                )}
               </div>
             ))}
           </div>

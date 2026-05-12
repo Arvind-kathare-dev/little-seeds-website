@@ -12,6 +12,7 @@ export const C = {
   sageLight: "#F0F5EF",
   sagePale: "#F7FAF6",
   gold: "#D4A853",
+  goldDark: "#A67C37",
   goldLight: "#FBF5E6",
   cream: "#FBF8F4",
   warm: "#F9F5F0",

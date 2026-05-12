@@ -77,15 +77,16 @@ export default function Navbar() {
           <Image src="/logo-transparent.png" alt="Little Seeds" width={120} height={42} style={{ height: 42, width: "auto", objectFit: "contain" }} priority />
         </Link>
 
-        <div className="ls-nav-d" style={{ display: "flex", gap: 26, alignItems: "center" }}>
+        <div className="ls-nav-d" style={{ display: "flex", gap: 34, alignItems: "center" }}>
           <Link href="/" style={pageLinkStyle("/")}>Home</Link>
           <Link href="/about" style={pageLinkStyle("/about")}>About Us</Link>
+          <Link href="/programs" style={pageLinkStyle("/programs")}>Programs</Link>
           <Link href="/our-goal" style={pageLinkStyle("/our-goal")}>Our Goal</Link>
           <Link href="/pictures" style={pageLinkStyle("/pictures")}>Pictures</Link>
           <Link href="/teachers" style={pageLinkStyle("/teachers")}>Teachers</Link>
           <Link href="/ramadan" style={pageLinkStyle("/ramadan")}>Ramadan</Link>
 
-           {/* <button onClick={() => scrollTo("programs")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>Programs</button>
+          {/* <button onClick={() => scrollTo("programs")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>Programs</button>
           <button onClick={() => scrollTo("about")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>About</button>
           <button onClick={() => scrollTo("contact")} style={{ ...navLinkStyle, fontSize: 16, color: C.text, textAlign: "left" }}>Contact</button> */}
           <button
@@ -127,9 +128,10 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div style={{ background: C.cream, padding: "12px 24px", display: "flex", flexDirection: "column", gap: 8 }}>
+        <div style={{ background: C.cream, padding: "16px 24px", display: "flex", flexDirection: "column", gap: 12 }}>
           <Link href="/" style={{ ...navLinkStyle, fontSize: 16, color: C.text, textDecoration: "none" }}>Home</Link>
           <Link href="/about" style={{ ...pageLinkStyle("/about"), fontSize: 16, color: C.text }}>About Us</Link>
+          <Link href="/programs" style={{ ...pageLinkStyle("/programs"), fontSize: 16, color: C.text }}>Programs</Link>
           <Link href="/our-goal" style={{ ...pageLinkStyle("/our-goal"), fontSize: 16, color: C.text }}>Our Goal</Link>
           <Link href="/pictures" style={{ ...pageLinkStyle("/pictures"), fontSize: 16, color: C.text }}>Pictures</Link>
           <Link href="/teachers" style={{ ...pageLinkStyle("/teachers"), fontSize: 16, color: C.text }}>Teachers</Link>

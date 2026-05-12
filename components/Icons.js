@@ -95,3 +95,51 @@ export function PaletteIcon({ size = 36 }) {
     </svg>
   );
 }
+
+export function RocketIcon({ size = 36, color = C.teal }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 36 36" fill="none">
+      <path d="M12 24l-3 6 6-3M18 6c6 0 12 6 12 12s-12 12-12 12S6 24 6 18s6-12 12-12z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity=".6" />
+      <path d="M22 14c1.5 1.5 1.5 4 0 5.5s-4 1.5-5.5 0" stroke={color} strokeWidth="2" strokeLinecap="round" opacity=".4" />
+    </svg>
+  );
+}
+
+export function UsersIcon({ size = 36, color = C.teal }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 36 36" fill="none">
+      <circle cx="12" cy="14" r="5" stroke={color} strokeWidth="2" opacity=".6" />
+      <path d="M4 28c0-4 4-7 8-7s8 3 8 7" stroke={color} strokeWidth="2" strokeLinecap="round" opacity=".5" />
+      <circle cx="24" cy="14" r="4" stroke={color} strokeWidth="2" opacity=".4" />
+      <path d="M18 28c0-3 3-5 6-5s6 2 6 5" stroke={color} strokeWidth="2" strokeLinecap="round" opacity=".3" />
+    </svg>
+  );
+}
+
+export function MapPinIcon({ size = 36, color = C.coral }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 36 36" fill="none">
+      <path d="M18 32s-10-8-10-14a10 10 0 1120 0c0 6-10 14-10 14z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity=".6" />
+      <circle cx="18" cy="18" r="3" stroke={color} strokeWidth="2" opacity=".5" />
+    </svg>
+  );
+}
+
+export function PhoneIcon({ size = 36, color = C.teal }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 36 36" fill="none">
+      <path d="M10 4h16a2 2 0 012 2v24a2 2 0 01-2 2H10a2 2 0 01-2-2V6a2 2 0 012-2z" stroke={color} strokeWidth="2" opacity=".5" />
+      <line x1="14" y1="28" x2="22" y2="28" stroke={color} strokeWidth="2" strokeLinecap="round" opacity=".6" />
+    </svg>
+  );
+}
+
+export function MailIcon({ size = 36, color = C.teal }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 36 36" fill="none">
+      <rect x="4" y="8" width="28" height="20" rx="3" stroke={color} strokeWidth="2" opacity=".5" />
+      <path d="M4 10l14 10 14-10" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity=".6" />
+    </svg>
+  );
+}
+
