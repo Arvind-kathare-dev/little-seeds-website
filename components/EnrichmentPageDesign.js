@@ -42,7 +42,9 @@ export default function EnrichmentPageDesign() {
       {/* Hero */}
       <section style={{ padding: "60px 24px 80px", background: `linear-gradient(170deg, ${C.sagePale} 0%, ${C.cream} 100%)` }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <BackButton />
+          <div className="ls-back-btn-wrap">
+            <BackButton />
+          </div>
           <div style={{ display: "flex", gap: 48, alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ flex: "1 1 400px" }}>
               <SectionLabel text="Enrichment Programs" color={C.sage} />
@@ -156,6 +158,12 @@ export default function EnrichmentPageDesign() {
       </section>
 
       <AboutSection />
+
+      <style>{`
+        @media (min-width: 1024px) {
+          .ls-back-btn-wrap { margin-left: -60px; }
+        }
+      `}</style>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function SummerCampPage() {
       {/* Hero */}
       <section className="ls-res-section" style={{ padding: "60px 24px 80px", background: `linear-gradient(170deg, ${C.goldLight} 0%, ${C.cream} 100%)`, textAlign: "center" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <div style={{ display: "flex", justifyContent: "flex-start", marginBottom: 20 }}>
+          <div className="ls-back-btn-wrap" style={{ display: "flex", justifyContent: "flex-start", marginBottom: 20 }}>
             <BackButton />
           </div>
           <FadeIn>
@@ -192,6 +192,9 @@ export default function SummerCampPage() {
           .ls-highlight-grid { grid-template-columns: 1fr !important; }
           .ls-hero-tags { flex-direction: column; align-items: stretch; }
           .ls-hero-tags > div { justify-content: center; }
+        }
+        @media (min-width: 1024px) {
+          .ls-back-btn-wrap { margin-left: -60px; }
         }
       `}</style>
     </div>

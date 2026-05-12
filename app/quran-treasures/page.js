@@ -17,7 +17,7 @@ export default function QuranTreasuresPage() {
       {/* Hero */}
       <section className="ls-res-section" style={{ padding: "60px 24px 80px", background: `linear-gradient(170deg, ${C.goldLight} 0%, ${C.cream} 100%)`, textAlign: "center" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <div style={{ display: "flex", justifyContent: "flex-start", marginBottom: 20 }}>
+          <div className="ls-back-btn-wrap" style={{ display: "flex", justifyContent: "flex-start", marginBottom: 20 }}>
             <BackButton />
           </div>
           <FadeIn>
@@ -169,6 +169,9 @@ export default function QuranTreasuresPage() {
       <style>{`
         @media (max-width: 600px) {
           .ls-res-section { padding: 48px 16px !important; }
+        }
+        @media (min-width: 1024px) {
+          .ls-back-btn-wrap { margin-left: -60px; }
         }
       `}</style>
     </div>

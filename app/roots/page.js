@@ -58,7 +58,9 @@ export default function RootsPage() {
       {/* Hero */}
       <section style={{ padding: "60px 24px 80px", background: `linear-gradient(170deg, ${C.tealPale} 0%, ${C.cream} 100%)` }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <BackButton />
+          <div className="ls-back-btn-wrap">
+            <BackButton />
+          </div>
           <div style={{ display: "flex", gap: 48, alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ flex: "1 1 400px" }}>
               <SectionLabel text="Roots Program" color={C.teal} />
@@ -104,6 +106,12 @@ export default function RootsPage() {
       </section>
 
       <AboutSection />
+
+      <style>{`
+        @media (min-width: 1024px) {
+          .ls-back-btn-wrap { margin-left: -60px; }
+        }
+      `}</style>
     </div>
   );
 }
