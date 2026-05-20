@@ -12,9 +12,54 @@ export default function ContactSection() {
   const [parent, setParent] = useState({ name: "", email: "", phone: "", branch: "" });
   const [submitted, setSubmitted] = useState(false);
 
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
   const addChild = () => setChildren((p) => [...p, emptyChild()]);
   const removeChild = (idx) => setChildren((p) => p.filter((_, i) => i !== idx));
   const updateChild = (idx, field, val) => setChildren((p) => p.map((c, i) => (i === idx ? { ...c, [field]: val } : c)));
+
+  const handleSubmit = async () => {
+    if (!parent.name || !parent.email || !parent.phone || !parent.branch) {
+      setError("Please fill out all parent details and select a branch.");
+      return;
+    }
+    
+    for (let c of children) {
+      if (!c.name || !c.age || !c.program) {
+        setError("Please fill out all child details.");
+        return;
+      }
+    }
+
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch('/api/enroll', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          parentName: parent.name,
+          parentEmail: parent.email,
+          parentPhone: parent.phone,
+          branch: parent.branch,
+          children: children
+        })
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await response.json();
+        setError(data.error || "Failed to submit. Please try again.");
+      }
+    } catch (e) {
+      setError("An error occurred. Please try again later.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   const inputStyle = {
     display: "block",
@@ -69,10 +114,15 @@ export default function ContactSection() {
           {submitted ? (
             <div style={{ background: C.white, borderRadius: 18, padding: 36, border: `1px solid ${C.teal}18` }}>
               <HeartIcon size={44} color={C.sage} />
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 17, fontWeight: 600, color: C.teal, marginTop: 14 }}>Thank you! We&apos;ll be in touch soon.</p>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 17, fontWeight: 600, color: C.teal, margin: "14px 0 0" }}>Thank you! Your enrollment inquiry has been sent. We&apos;ll be in touch soon.</p>
             </div>
           ) : (
             <div style={{ background: C.white, borderRadius: 20, padding: "32px 28px", boxShadow: "0 8px 36px rgba(47,127,125,.07)", border: `1px solid ${C.teal}0D`, textAlign: "left" }}>
+              {error && (
+                <div style={{ padding: "12px", marginBottom: "16px", borderRadius: "8px", background: "#fce8e6", color: "#c5221f", fontSize: "14px", fontFamily: "'DM Sans', sans-serif", fontWeight: 500, textAlign: "center" }}>
+                  {error}
+                </div>
+              )}
               {/* Parent info */}
               <p style={{ ...sectionTitle, marginBottom: 12 }}>Parent / Guardian</p>
               <input placeholder="Full name" value={parent.name} onChange={(e) => setParent((p) => ({ ...p, name: e.target.value }))} style={inputStyle} onFocus={focus} onBlur={blur} />
@@ -163,23 +213,24 @@ export default function ContactSection() {
               ))}
 
               <button
-                onClick={() => setSubmitted(true)}
+                onClick={handleSubmit}
+                disabled={submitting}
                 style={{
                   width: "100%",
                   padding: "15px 0",
                   borderRadius: 12,
-                  background: C.teal,
+                  background: submitting ? "#8bbab8" : C.teal,
                   color: C.white,
                   border: "none",
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 15,
                   fontWeight: 600,
-                  cursor: "pointer",
+                  cursor: submitting ? "not-allowed" : "pointer",
                   transition: "all .3s",
                   marginTop: 8,
                 }}
               >
-                Submit Enrollment Inquiry
+                {submitting ? "Submitting..." : "Submit Enrollment Inquiry"}
               </button>
             </div>
           )}
